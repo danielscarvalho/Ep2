@@ -10,7 +10,7 @@ def critico():
 
 
 def luta():
-	if random.randint(0,9) <= 3:
+	if random.randint(1,10) <=4:
 		return True
 	else:
 		return False
@@ -74,13 +74,24 @@ def batalha(jogador,oponente):
 		if acao == "fugir":
 			if luta()==True:
 				print("Fuga Falhou!")
-				vidajog=vidajog-(insperdex[oponente]["ataque"]-insperdex[jogador]["defesa"])
-				print("O seu {} é atacado e fica com {} de vida".format(jogador,vidajog))
+				if critico()==True:
+					vidajog=vidajog-(insperdex[oponente]["ataque"]-insperdex[jogador]["defesa"])*1.5
+					if vidajog>0:
+						print("O seu {} é atacado CRITICAMENTE e fica com {} de vida".format(jogador,vidajog))
+					elif vidajog<=0:
+						print("O seu {} é atacado CRITICAMENTE e desmaia!".format(jogador))
+				else:
+					vidajog=vidajog-(insperdex[oponente]["ataque"]-insperdex[jogador]["defesa"])
+					if vidajog>0:
+						print("O seu {} é atacado e fica com {} de vida".format(jogador,vidajog))
+					elif vidajog<=0:
+						print("O seu {} é atacado e desmaia!".format(jogador))
 			else:
 				print("Fuga Sucedida")
 				break
 
 
+print("Bem Vindo ao Mundo de Inspermon!")
 jogador=str(input("Qual seu Inspermon inicial? (Pikaxu, Kapuznakara ou Xanaina) ")).title()
 while True:
 	fazer=str(input("O que você vai fazer? (Passear ou Dormir) ")).lower()
