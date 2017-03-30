@@ -1,8 +1,20 @@
 import random
 import time
-insperdex={"Pikaxu":{"Ataque":50, "Defesa":30, "Vida":200, "Exp":10, "Chance":10},
-           "Kapuznakara":{"Ataque":50, "Defesa":30, "Vida":200, "Exp":20, "Chance":5}, 
-           "Xanaina":{"Ataque":100, "Defesa":10, "Vida":220, "Exp":30, "Chance":2}}  #Dicionários dos Inspermons
+insperdex={
+	"Pikaxu":{
+		"Ataque":50, "Defesa":30, "Vida":200, "Exp":10, "Chance":10
+	},
+	"Kapuznakara":{
+		"Ataque":50, "Defesa":30, "Vida":200, "Exp":20, "Chance":5
+	}, 
+	"Xanaina":{
+		"Ataque":100, "Defesa":10, "Vida":220, "Exp":30, "Chance":2
+	},
+	"Kingnaldo":{
+		"Ataque":120, "Defesa":15, "Vida":180, "Exp":34, "Chance":1
+	}
+}	#Dicionários dos Inspermons
+
 dexjog={} #InsperDex
 
 def critico(): #Função Critico
@@ -23,7 +35,7 @@ lista_chance=[] #Lista de chance de encontro no passeio
 for i in insperdex:
 	x=0
 	while x<insperdex[i]["Chance"]:
-		lista_chance.append(i)
+		lista_chance.append(x)
 		x=x+1
 
 
@@ -32,6 +44,10 @@ def roll(): #Randomizador
  	aleatorio=lista_chance[poke]
  	return aleatorio
 
+def experiencia(xp):
+	expganha=insperdex[oponente]["Exp"]
+	xp=xp+expganha
+	return xp
 
 def batalha(jogador,oponente): #Função Batalha
 	vidajog=insperdex[jogador]["Vida"]
@@ -117,10 +133,11 @@ def batalha(jogador,oponente): #Função Batalha
 				break
 
 
-print("Bem Vindo ao Mundo de Inspermon!") #Introdução
+e=0
+print("Bem Vindo ao Mundo de Inspermon!")
 time.sleep(0.5)
-jogador=str(input("Qual seu Inspermon inicial? (Pikaxu, Kapuznakara ou Xanaina) ")).title() #Escolha de Inicial
-dexjog[jogador]=insperdex[jogador]
+jogador=str(input("Qual seu Inspermon inicial? (Pikaxu, Kapuznakara, Xanaina ou Kingnaldo) ")).title()
+dexjog[jogador]=[insperdex[jogador]]
 time.sleep(0.5)
 while True:
 	fazer=str(input("O que você vai fazer? (Passear(P), Dormir(D) ou Insperdex(I)?) ")).lower() #Escolha de ação
@@ -130,9 +147,17 @@ while True:
 		time.sleep(1.5) 
 		oponente=roll()
 		batalha(jogador,oponente)
-	if fazer == "dormir" or fazer == "d": #Caso Durma
+		e=experiencia(e)
+		print("Você tem agora {} de experiência".format(e))		
+	if fazer == "dormir" or fazer == "d":
 		print("Bons Sonhos!")
 		break
-	if fazer == "insperdex" or fazer == "i": #Caso cheque InsperDex
+	if fazer == "insperdex" or fazer == "i":
 		print("Este são os Inspèrmons que você já encontrou: {}".format(dexjog))
 		time.sleep(0.5)
+
+
+
+
+
+
