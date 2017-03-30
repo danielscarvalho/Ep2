@@ -1,5 +1,4 @@
-# Ep2
-Inspèrmon
+# Ep2 - Inspèrmon
 
 Começamos implementando dicionarios dentro de um dicionario para criar os Inspèrmons e seus atributos.
 
