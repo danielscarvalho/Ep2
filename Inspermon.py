@@ -1,5 +1,19 @@
 import random
-insperdex={"Pikaxu":{"Ataque":50, "Defesa":30, "Vida":200, "Exp":10, "Chance":10}, "Kapuznakara":{"Ataque":50, "Defesa":30, "Vida":200, "Exp":20, "Chance":5}, "Xanaina":{"Ataque":100, "Defesa":10, "Vida":220, "Exp":30, "Chance":2}}
+insperdex={
+	"Pikaxu":{
+		"Ataque":50, "Defesa":30, "Vida":200, "Exp":10, "Chance":10
+	},
+	"Kapuznakara":{
+		"Ataque":50, "Defesa":30, "Vida":200, "Exp":20, "Chance":5
+	}, 
+	"Xanaina":{
+		"Ataque":100, "Defesa":10, "Vida":220, "Exp":30, "Chance":2
+	},
+	"Kingnaldo":{
+		"Ataque":120, "Defesa":15, "Vida":180, "Exp":34, "Chance":1
+	}
+}
+
 dexjog={}
 
 def critico():
@@ -29,7 +43,12 @@ def roll():
  	aleatorio=lista_chance[poke]
  	return aleatorio
 
+def experiencia(xp):
+	expganha=insperdex[oponente]["Exp"]
+	xp=xp+expganha
+	return xp
 
+e=0
 def batalha(jogador,oponente):
 	vidajog=insperdex[jogador]["Vida"]
 	vidaopo=insperdex[oponente]["Vida"]
@@ -69,6 +88,7 @@ def batalha(jogador,oponente):
 			
 			if vidaopo<=0:
 				print(("Você venceu! Seu {} ganhou {} de exp!").format(jogador,insperdex[oponente]["Exp"]))
+
 			elif vidajog<=0:
 				print("Você perdeu!")
 		
@@ -93,7 +113,7 @@ def batalha(jogador,oponente):
 
 
 print("Bem Vindo ao Mundo de Inspermon!")
-jogador=str(input("Qual seu Inspermon inicial? (Pikaxu, Kapuznakara ou Xanaina) ")).title()
+jogador=str(input("Qual seu Inspermon inicial? (Pikaxu, Kapuznakara, Xanaina ou Kingnaldo) ")).title()
 
 dexjog[jogador]=insperdex[jogador]
 while True:
@@ -101,8 +121,15 @@ while True:
 	if fazer == "passear" or fazer == "p":
 		oponente=roll()
 		batalha(jogador,oponente)
+		e=experiencia(e)
+		print(e)		
 	if fazer == "dormir" or fazer == "d":
 		print("Bons Sonhos!")
 		break
 	if fazer == "insperdex" or fazer == "i":
 		print(dexjog)
+
+
+
+
+
