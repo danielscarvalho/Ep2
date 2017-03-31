@@ -11,7 +11,7 @@ insperdex={
 		"Ataque":100, "Defesa":10, "Vida":220, "Exp":30, "Chance":3
 	},
 	"Kingnaldo":{
-		"Ataque":120, "Defesa":15, "Vida":180, "Exp":35, "Chance":2
+		"Ataque":120, "Defesa":15, "Vida":180, "Exp":35, "Chance":2, "Evo":10
 	},
 	"Douglas":{
 		"Ataque":90, "Defesa":25, "Vida":210, "Exp":30, "Chance":3
@@ -26,7 +26,7 @@ insperdex={
 		"Ataque":120, "Defesa":30, "Vida":240, "Exp":30, "Chance":0
 	},
 	"Godnaldo":{
-		"Ataque":140, "Defesa":35, "Vida":200, "Exp":30, "Chance":0
+		"Ataque":140, "Defesa":35, "Vida":200, "Exp":30, "Chance":0, "Evo":1000
 	},
 	"Showglas":{
 		"Ataque":110, "Defesa":45, "Vida":230, "Exp":30, "Chance":0
@@ -188,7 +188,7 @@ while True:
 		e=experiencia(e)
 		print("Você tem agora {} de experiência".format(e))
 		print(e)
-		if e >=10:
+		if e >=insperdex[jogador]["Evo"]:
 			jogador=evolucao(jogador)
 			print("O seu pokemon evoluiu para {}! ".format(jogador))
 		
