@@ -23,19 +23,16 @@ insperdex={
 dexjog={} #InsperDex
 
 
-def save(arquivo,poke,exp,dexjog):
-	with open("{}".format(arquivo),"w") as save:
-		pickle.dump(dexjog, save)
-		pickle.dump(poke, save)
-		pickle.dump(exp, save)
-
+def save(arquivo):
+	
+	dados= open(arquivo,'wb') 
+	pickle.dump({"dados" : [dexjog, e, jogador]}, dados)
+	dados.close()
 
 
 def load(arquivo):
-	with open("{}".format(arquivo), "r") as load:
-		dexjog=pickle.load(arquivo)
-		poke=pickle.load(arquivo)
-		e=pickle.load(arquivo)
+	dado=pickle.load(open("bruno","rb"))
+	return dado
 
 
 def critico(): #Função Critico
@@ -132,9 +129,11 @@ def batalha(jogador,oponente): #Função Batalha
 			if vidaopo<=0: #Resultado Batalha
 				print(("Você venceu! Seu {} ganhou {} de exp!").format(jogador,insperdex[oponente]["Exp"]))
 				time.sleep(1.0)
+				return True
 			elif vidajog<=0:
 				print("Você perdeu e seu Inspèrmon foi levado ao InsperCenter!")
 				time.sleep(1.0)
+				return False
 		
 		if acao == "fugir" or acao == "f": #Tentativa de Fuga
 			time.sleep(1.0)
@@ -162,7 +161,6 @@ def batalha(jogador,oponente): #Função Batalha
 				time.sleep(1.0)
 				break
 
-
 e=0
 print("Bem Vindo ao Mundo de Inspermon!")
 time.sleep(0.5)
@@ -173,14 +171,16 @@ time.sleep(0.5)
 lista_saves=[]
 
 while True:
-	fazer=str(input("O que você vai fazer? (Passear(P), Dormir(D), Insperdex(I), Salvar(S) ou Load(L)? ")).lower() #Escolha de ação
+	fazer=str(input("O que você vai fazer? (Passear(P)s, Dormir(D), Insperdex(I), Salvar(S) ou Load(L)? ")).lower() #Escolha de ação
 	time.sleep(1.0)
 	if fazer == "passear" or fazer == "p": #Caso Passeie
 		print("Passeando...")
 		time.sleep(1.5) 
 		oponente=roll()
-		batalha(jogador,oponente)
-		e=experiencia(e)
+		if batalha(jogador,oponente)==True:
+			e=experiencia(e)
+		else:
+			continue
 		print("Seu {} possui {} de experiência".format(jogador,e))		
 	if fazer == "dormir" or fazer == "d": #Caso durma
 		print("Bons Sonhos!")
@@ -191,24 +191,24 @@ while True:
 	if fazer == "salvar" or fazer == "s":
 		arquivo=str(input("Deseja salvar com que nome? "))
 		lista_saves.append(arquivo)
-		save(arquivo,jogador,e,dexjog)
+		save(arquivo)
 		print("Salvando....")
 		time.sleep(2)
 		print("Sucesso!")
 		time.sleep(0.5)
 	if fazer == "load" or fazer == "l":
-		if len(lista_saves)>0:
+		if len(lista_saves)>=0:
 			print("Os saves disponíveis são: {}".format(lista_saves))
 			time.sleep(1)
 			file=str(input("Qual save deseja carregar? "))
-			load(file)
+			dado=load(file)
+			dexjog=dado["dados"][0]
+			e=dado["dados"][1]
+			jogador=dado["dados"][2]
 			print("Carregando....")
 			time.sleep(2)
 			print("Sucesso!")
 			time.sleep(0.5)
-		if len(lista_saves)==0:
-			print("Não há saves ainda!")
-
 
 
 
