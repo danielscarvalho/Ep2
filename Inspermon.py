@@ -12,11 +12,25 @@ insperdex={
 		"Ataque":100, "Defesa":10, "Vida":220, "Exp":30, "Chance":3
 	},
 	"Kingnaldo":{
-		"Ataque":120, "Defesa":15, "Vida":180, "Exp":35, "Chance":2
+		"Ataque":120, "Defesa":15, "Vida":180, "Exp":35, "Chance":2, "Evo":10
+	},
+	"Douglas":{
+		"Ataque":90, "Defesa":25, "Vida":210, "Exp":30, "Chance":3
+	},
+	"Cetaxu":{
+		"Ataque":70, "Defesa":50, "Vida":220, "Exp":30, "Chance":0
+	},
+	"Bonenakara":{
+		"Ataque":70, "Defesa":50, "Vida":220, "Exp":30, "Chance":0
+	}, 
+	"Xanalna":{
+		"Ataque":120, "Defesa":30, "Vida":240, "Exp":30, "Chance":0
+	},
+	"Godnaldo":{
+		"Ataque":140, "Defesa":35, "Vida":200, "Exp":30, "Chance":0, "Evo":1000
 	},
 	"Showglas":{
-		"Ataque":90, "Defesa":25, "Vida":210, "Exp":30, "Chance":3
-
+		"Ataque":110, "Defesa":45, "Vida":230, "Exp":30, "Chance":0
 	}
 }	#Dicionários dos Inspermons
 
@@ -24,7 +38,6 @@ dexjog={} #InsperDex
 
 
 def save(arquivo):
-	
 	dados= open(arquivo,'wb') 
 	pickle.dump({"dados" : [dexjog, e, jogador]}, dados)
 	dados.close()
@@ -51,10 +64,13 @@ def luta(): #Função Fuga
 
 lista_chance=[] #Lista de chance de encontro no passeio
 for i in insperdex:
-	x=0
-	while x<insperdex[i]["Chance"]:
-		lista_chance.append(i)
-		x=x+1
+	if insperdex[i]["Chance"]>0:
+		x=0
+		while x<insperdex[i]["Chance"]:
+			lista_chance.append(i)
+			x=x+1
+	elif insperdex[i]["Chance"]<=0:
+		continue
 
 
 def roll(): #Randomizador
@@ -67,6 +83,19 @@ def experiencia(xp):
 	expganha=insperdex[oponente]["Exp"]
 	xp=xp+expganha
 	return xp
+
+
+def evolucao(jogador):
+	if jogador == "Pikaxu":
+		return "Cetaxu"
+	if jogador == "Kapuznakara":
+		return "Bonenakara"
+	if jogador == "Xanaina":
+		return "Xanalna"
+	if jogador == "Kingnaldo":
+		return "Godnaldo"
+	if jogador == "Douglas":
+		return "Showglas"
 
 
 def batalha(jogador,oponente): #Função Batalha
@@ -161,6 +190,8 @@ def batalha(jogador,oponente): #Função Batalha
 				time.sleep(1.0)
 				break
 
+
+
 e=0
 print("Bem Vindo ao Mundo de Inspermon!")
 time.sleep(0.5)
@@ -171,7 +202,7 @@ time.sleep(0.5)
 lista_saves=[]
 
 while True:
-	fazer=str(input("O que você vai fazer? (Passear(P)s, Dormir(D), Insperdex(I), Salvar(S) ou Load(L)? ")).lower() #Escolha de ação
+	fazer=str(input("O que você vai fazer? (Passear(P), Dormir(D), Insperdex(I), Salvar(S) ou Load(L)? ")).lower() #Escolha de ação
 	time.sleep(1.0)
 	if fazer == "passear" or fazer == "p": #Caso Passeie
 		print("Passeando...")
@@ -179,9 +210,12 @@ while True:
 		oponente=roll()
 		if batalha(jogador,oponente)==True:
 			e=experiencia(e)
-		else:
-			continue
-		print("Seu {} possui {} de experiência".format(jogador,e))		
+		print("Seu {} possui {} de experiência".format(jogador,e))
+		if e >=insperdex[jogador]["Evo"]:
+			jogador=evolucao(jogador)
+			print("O seu pokemon evoluiu para {}! ".format(jogador))
+		
+
 	if fazer == "dormir" or fazer == "d": #Caso durma
 		print("Bons Sonhos!")
 		break 
