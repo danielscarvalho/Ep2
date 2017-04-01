@@ -44,7 +44,7 @@ def save(arquivo):
 
 
 def load(arquivo):
-	dado=pickle.load(open("bruno","rb"))
+	dado=pickle.load(open(arquivo,"rb"))
 	return dado
 
 
@@ -199,8 +199,8 @@ time.sleep(0.5)
 jogador=str(input("Qual seu Inspermon inicial? (Pikaxu, Kapuznakara, Xanaina, Kingnaldo ou Showglas) ")).title()
 dexjog[jogador]=insperdex[jogador]
 time.sleep(0.5)
+list
 lista_saves=[]
-
 while True:
 	fazer=str(input("O que você vai fazer? (Passear(P), Dormir(D), Insperdex(I), Salvar(S) ou Load(L)? ")).lower() #Escolha de ação
 	time.sleep(1.0)
@@ -214,6 +214,7 @@ while True:
 		if e >=insperdex[jogador]["Evo"]:
 			jogador=evolucao(jogador)
 			print("O seu pokemon evoluiu para {}! ".format(jogador))
+			dexjog[jogador]=insperdex[jogador]
 		
 
 	if fazer == "dormir" or fazer == "d": #Caso durma
@@ -226,12 +227,16 @@ while True:
 		arquivo=str(input("Deseja salvar com que nome? "))
 		lista_saves.append(arquivo)
 		save(arquivo)
+		saves=open("lista", "wb" )
+		pickle.dump(lista_saves, saves)
+		saves.close()
 		print("Salvando....")
 		time.sleep(2)
 		print("Sucesso!")
 		time.sleep(0.5)
 	if fazer == "load" or fazer == "l":
-		if len(lista_saves)>=0:
+		lista_saves=pickle.load(open("lista","rb"))
+		if len(lista_saves)>0:
 			print("Os saves disponíveis são: {}".format(lista_saves))
 			time.sleep(1)
 			file=str(input("Qual save deseja carregar? "))
@@ -243,6 +248,8 @@ while True:
 			time.sleep(2)
 			print("Sucesso!")
 			time.sleep(0.5)
+		if len(lista_saves)==0:
+			print("Não há saves ainda!")
 
 
 
