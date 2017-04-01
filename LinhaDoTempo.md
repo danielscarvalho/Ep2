@@ -11,3 +11,7 @@ Depois foram implementadas as funções básicas de passear, dormir e escolha de
 Depois criou-se o randomizador de pokemon encontrado.
 
 Depois a função do InsperDèx.
+
+Depois um sistema de exp e evolução.
+
+Depois um sistema de saves.
