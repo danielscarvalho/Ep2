@@ -196,28 +196,36 @@ def batalha(jogador,oponente): #Função Batalha
 				print("Fuga Falhou!")
 				time.sleep(1.0)
 				
-				if critico()==True:
-					vidajog=vidajog-(insperdex[oponente]["Ataque"]-(insperdex[jogador]["Defesa"]+10*niveljog))*1.5
-					
-					if vidajog>0:
-						print("O seu {} é atacado CRITICAMENTE e fica com {} de vida".format(jogador,vidajog))
-						time.sleep(1.0)
-					
-					elif vidajog<=0:
-						print("O seu {} é atacado CRITICAMENTE e desmaia!".format(jogador))
-						time.sleep(1.0)
+				if (insperdex[oponente]["Ataque"]-(insperdex[jogador]["Defesa"]+10*niveljog))>0:
 				
-				else:
-					vidajog=vidajog-(insperdex[oponente]["Ataque"]-(insperdex[jogador]["Defesa"]+10*niveljog))
-					
-					if vidajog>0:
-						print("O seu {} é atacado e fica com {} de vida".format(jogador,vidajog))
-						time.sleep(1.0)
-					
-					elif vidajog<=0:
-						print("O seu {} é atacado e desmaia!".format(jogador))
-						time.sleep(1.0)
-			
+					if vidaopo>0: #Ataque Oponente
+						print("O {} selvagem se prepara para atacar!".format(oponente))
+						time.sleep(1)
+						
+						if critico()==True:
+							vidajog=vidajog-(insperdex[oponente]["Ataque"]-(insperdex[jogador]["Defesa"]+10*niveljog))*1.5
+							
+							if vidajog>0:
+								print("O seu {} é atacado CRITICAMENTE e fica com {} de vida".format(jogador,vidajog))
+								time.sleep(1.0)
+							
+							elif vidajog<=0:
+								print("O seu {} é atacado CRITICAMENTE e desmaia!".format(jogador))
+								time.sleep(1.0)
+						
+						else:
+							vidajog=vidajog-(insperdex[oponente]["Ataque"]-(insperdex[jogador]["Defesa"]+10*niveljog))
+							
+							if vidajog>0:
+								print("O seu {} é atacado e fica com {} de vida".format(jogador,vidajog))
+								time.sleep(1.0)
+							
+							elif vidajog<=0:
+								print("O seu {} é atacado e desmaia!".format(jogador))
+								time.sleep(1.0)
+				
+				elif (insperdex[oponente]["Ataque"]-(insperdex[jogador]["Defesa"]+10*niveljog))<=0:
+					print("O ataque do {} não deu dano!".format(oponente))
 			else:
 				print("Fuga Sucedida")
 				time.sleep(1.0)
@@ -229,27 +237,30 @@ exp=0
 lista_saves=[]
 print("Bem Vindo ao Mundo de Inspermon!")
 time.sleep(0.5)
-inicio=str(input("New Game(N) ou Load Game(L)? ")).lower()
-if inicio=="new game" or inicio=="n":
-	jogador=str(input("Qual seu Inspermon inicial? (Pikaxu, Kapuznakara, Xanaina, Kingnaldo ou Douglas) ")).title()
-	dexjog[jogador]=insperdex[jogador]
-	time.sleep(0.5)
-if inicio=="load game" or inicio=="l":
-	lista_saves=pickle.load(open("lista","rb"))
-			
-		if len(lista_saves)>0:
-			print("Os saves disponíveis são: {}".format(lista_saves))
-			time.sleep(1)
-			file=str(input("Qual save deseja carregar? "))
-			dado=load(file)
-			dexjog=dado["dados"][0]
-			exp=dado["dados"][1]
-			jogador=dado["dados"][2]
-			print("Carregando....")
-			time.sleep(2)
-			print("Sucesso!")
-			time.sleep(0.5)
-		if len(lista_saves)==0:
+while True:
+	inicio=str(input("New Game(N) ou Load Game(L)? ")).lower()
+	if inicio=="new game" or inicio=="n":
+		jogador=str(input("Qual seu Inspermon inicial? (Pikaxu, Kapuznakara, Xanaina, Kingnaldo ou Douglas) ")).title()
+		dexjog[jogador]=insperdex[jogador]
+		time.sleep(0.5)
+		break
+	if inicio=="load game" or inicio=="l":
+		try:
+			lista_saves=pickle.load(open("lista","rb"))
+			if len(lista_saves)>0:
+				print("Os saves disponíveis são: {}".format(lista_saves))
+				time.sleep(1)
+				file=str(input("Qual save deseja carregar? "))
+				dado=load(file)
+				dexjog=dado["dados"][0]
+				exp=dado["dados"][1]
+				jogador=dado["dados"][2]
+				print("Carregando....")
+				time.sleep(2)
+				print("Sucesso!")
+				time.sleep(0.5)
+				break
+		except:
 			print("Não há saves ainda!")
 
 while True:
@@ -293,22 +304,21 @@ while True:
 		time.sleep(0.5)
 	
 	if fazer == "load" or fazer == "l":
-		lista_saves=pickle.load(open("lista","rb"))
-		
-		if len(lista_saves)>0:
-			print("Os saves disponíveis são: {}".format(lista_saves))
-			time.sleep(1)
-			file=str(input("Qual save deseja carregar? "))
-			dado=load(file)
-			dexjog=dado["dados"][0]
-			exp=dado["dados"][1]
-			jogador=dado["dados"][2]
-			print("Carregando....")
-			time.sleep(2)
-			print("Sucesso!")
-			time.sleep(0.5)
-		
-		if len(lista_saves)==0:
+		try:
+			lista_saves=pickle.load(open("lista","rb"))
+			if len(lista_saves)>0:
+				print("Os saves disponíveis são: {}".format(lista_saves))
+				time.sleep(1)
+				file=str(input("Qual save deseja carregar? "))
+				dado=load(file)
+				dexjog=dado["dados"][0]
+				exp=dado["dados"][1]
+				jogador=dado["dados"][2]
+				print("Carregando....")
+				time.sleep(2)
+				print("Sucesso!")
+				time.sleep(0.5)
+		except:
 			print("Não há saves ainda!")
 
 
