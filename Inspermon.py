@@ -35,6 +35,7 @@ insperdex={
 }	#Dicionários dos Inspermons
 
 dexjog={} #InsperDex
+seus_inspermons=[] #Lista com seus inspermons
 
 
 def save(arquivo):
@@ -57,6 +58,12 @@ def critico(): #Função Critico
 
 def luta(): #Função Fuga
 	if random.randint(1,10) <=3:
+		return True
+	else:
+		return False
+
+def captura(): #Função captura
+	if random.randint(1,10) <=4:
 		return True
 	else:
 		return False
@@ -114,7 +121,11 @@ def batalha(jogador,oponente): #Função Batalha
 	time.sleep(1.5)
 	
 	while vidajog>0 and vidaopo>0:
-		acao=str(input("Qual o seu comando? (Lutar(L) ou Fugir(F))")).lower() #Escolha de comando
+		if jogador == oponente or oponente in seus_inspermons:
+			acao=str(input("Qual o seu comando? (Lutar(L) ou Fugir(F))")).lower() #Escolha de comando
+
+		else:
+			acao=str(input("Qual o seu comando? (Lutar(L), Fugir(F) ou Capturar(C))")).lower() #Escolha de comando
 		
 		if acao == "lutar" or acao == "l": 
 			time.sleep(1.0)
@@ -164,6 +175,8 @@ def batalha(jogador,oponente): #Função Batalha
 						
 						elif vidajog<=0:
 							print("O seu {} é atacado CRITICAMENTE e desmaia!".format(jogador))
+							time.sleep(0.5)
+							print("O seu Inspermon foi levado ao InsperCenter!")
 							time.sleep(1.0)
 					
 					else:
@@ -231,6 +244,52 @@ def batalha(jogador,oponente): #Função Batalha
 				print("Fuga Sucedida")
 				time.sleep(1.0)
 				break
+
+		if acao == "capturar" or acao == "c":
+			if jogador != oponente:
+				cc= captura()
+				if cc == True:
+					seus_inspermons.append(oponente)
+					print("Parabéns! Você agora possui {} como um de seus inspermons!".format(oponente))
+					break
+			
+				if cc == False:
+					print("Foi por pouco! {} se recusa a ter sua liberdade retirada!".format(oponente))
+					if (insperdex[oponente]["Ataque"]-(insperdex[jogador]["Defesa"]+10*niveljog))>0:
+				
+						if vidaopo>0: #Ataque Oponente
+							print("O {} selvagem se prepara para atacar!".format(oponente))
+							time.sleep(1)
+					
+							if critico()==True:
+								vidajog=vidajog-(insperdex[oponente]["Ataque"]-(insperdex[jogador]["Defesa"]+10*niveljog))*1.5
+						
+								if vidajog>0:
+									print("O seu {} é atacado CRITICAMENTE e fica com {} de vida".format(jogador,vidajog))
+									time.sleep(1.0)
+						
+								elif vidajog<=0:
+									print("O seu {} é atacado CRITICAMENTE e desmaia!".format(jogador))
+									time.sleep(1.0)
+					
+							else:
+								vidajog=vidajog-(insperdex[oponente]["Ataque"]-(insperdex[jogador]["Defesa"]+10*niveljog))
+						
+								if vidajog>0:
+									print("O seu {} é atacado e fica com {} de vida".format(jogador,vidajog))
+									time.sleep(1.0)
+						
+								elif vidajog<=0:
+									print("O seu {} é atacado e desmaia!".format(jogador))
+									time.sleep(1.0)
+			
+					elif (insperdex[oponente]["Ataque"]-(insperdex[jogador]["Defesa"]+10*niveljog))<=0:
+						print("O ataque do {} não deu dano!".format(oponente))
+
+			else:
+				print("Você já possui esse inspermon!")
+
+
 				
 niveljog=1
 exp=0
@@ -242,6 +301,7 @@ while True:
 	if inicio=="new game" or inicio=="n":
 		jogador=str(input("Qual seu Inspermon inicial? (Pikaxu, Kapuznakara, Xanaina, Kingnaldo ou Douglas) ")).title()
 		dexjog[jogador]=insperdex[jogador]
+		seus_inspermons.append(jogador)
 		time.sleep(0.5)
 		break
 	if inicio=="load game" or inicio=="l":
@@ -264,8 +324,9 @@ while True:
 		except:
 			print("Não há saves ainda!")
 
+
 while True:
-	fazer=str(input("O que você vai fazer? (Passear(P), Dormir(D), Insperdex(I), Salvar(S) ? ")).lower() #Escolha de ação
+	fazer=str(input("O que você vai fazer? (Passear(P), Dormir(D), Insperdex(I), Salvar(S) ou Trocar Inspermon(T)? ")).lower() #Escolha de ação
 	time.sleep(1.0)
 	
 	if fazer == "passear" or fazer == "p": #Caso Passeie
@@ -279,6 +340,7 @@ while True:
 		time.sleep(0.5)
 		
 		if exp >=insperdex[jogador]["Evo"]:
+			seus_inspermons.remove(jogador)
 			jogador=evolucao(jogador)
 			print(".")
 			time.sleep(0.2)
@@ -296,6 +358,7 @@ while True:
 			print("Vida: {}".format(insperdex[jogador]["Vida"]))
 	
 			dexjog[jogador]=insperdex[jogador]
+			seus_inspermons.append(jogador)
 		
 
 	if fazer == "dormir" or fazer == "d": #Caso durma
@@ -305,6 +368,16 @@ while True:
 	if fazer == "insperdex" or fazer == "i": #Caso cheque Insperdex
 		print("Este são os Inspèrmons que você já encontrou: {}".format(dexjog))
 		time.sleep(0.5)
+
+	if fazer == "trocar inspermon" or fazer == "t":
+		print("Seus inspermons atuais são:")
+		for h in range(0,len(seus_inspermons)):
+			print("{}({})".format(seus_inspermons[h],h))
+			time.sleep(0.5)
+		hh=int(input("Insira o numero do inspermon desejado :"))
+		jogador=seus_inspermons[hh]
+		time.sleep(1.5)
+		print("Seu inspermon agora é {}".format(jogador))
 	
 	if fazer == "salvar" or fazer == "s":
 		print("Os saves disponíveis são: {}".format(lista_saves))
