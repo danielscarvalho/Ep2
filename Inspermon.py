@@ -6,16 +6,16 @@ insperdex={
 		"Ataque":50, "Defesa":30, "Vida":200, "Exp":10, "Chance":10, "Evo":20
 	},
 	"Kapuznakara":{
-		"Ataque":50, "Defesa":30, "Vida":200, "Exp":20, "Chance":5, "Evo":25
+		"Ataque":50, "Defesa":30, "Vida":200, "Exp":20, "Chance":7, "Evo":25
 	}, 
 	"Xanaina":{
-		"Ataque":100, "Defesa":10, "Vida":220, "Exp":30, "Chance":3, "Evo":30
+		"Ataque":105, "Defesa":10, "Vida":230, "Exp":30, "Chance":2, "Evo":30
 	},
 	"Kingnaldo":{
-		"Ataque":120, "Defesa":15, "Vida":180, "Exp":35, "Chance":2, "Evo":10   #mudar a evolucao do kingnaldo
+		"Ataque":120, "Defesa":15, "Vida":180, "Exp":35, "Chance":2, "Evo":30   #mudar a evolucao do kingnaldo
 	},
 	"Douglas":{
-		"Ataque":90, "Defesa":25, "Vida":210, "Exp":30, "Chance":3, "Evo":35
+		"Ataque":90, "Defesa":25, "Vida":210, "Exp":30, "Chance":2, "Evo":35
 	},
 	"Cetaxu":{
 		"Ataque":70, "Defesa":50, "Vida":220, "Exp":30, "Chance":0, "Evo":1000
@@ -40,7 +40,7 @@ seus_inspermons=[] #Lista com seus inspermons
 
 def save(arquivo):
 	dados= open(arquivo,'wb') 
-	pickle.dump({"dados" : [dexjog, exp, jogador]}, dados)
+	pickle.dump({"dados" : [dexjog, exp, jogador,seus_inspermons]}, dados)
 	dados.close()
 
 
@@ -62,13 +62,15 @@ def luta(): #Função Fuga
 	else:
 		return False
 
-def captura(): #Função captura
-	if random.randint(1,10) <=4:
+
+def captura(oponente,vidaopo): #Função captura
+	if random.randint(1,100) >=int(round((vidaopo/insperdex[oponente]["Vida"])*85+10)):
 		return True
 	else:
 		return False
 
 
+lista_evo=[]
 lista_chance=[] #Lista de chance de encontro no passeio
 for i in insperdex:
 	if insperdex[i]["Chance"]>0:
@@ -77,7 +79,7 @@ for i in insperdex:
 			lista_chance.append(i)
 			x=x+1
 	elif insperdex[i]["Chance"]<=0:
-		continue
+		lista_evo.append(i)
 
 
 def roll(): #Randomizador
@@ -121,6 +123,7 @@ def batalha(jogador,oponente): #Função Batalha
 	time.sleep(1.5)
 	
 	while vidajog>0 and vidaopo>0:
+		
 		if jogador == oponente or oponente in seus_inspermons:
 			acao=str(input("Qual o seu comando? (Lutar(L) ou Fugir(F))")).lower() #Escolha de comando
 
@@ -246,8 +249,11 @@ def batalha(jogador,oponente): #Função Batalha
 				break
 
 		if acao == "capturar" or acao == "c":
+			time.sleep(1.0)
+			
 			if jogador != oponente:
-				cc= captura()
+				cc= captura(oponente,vidaopo)
+				
 				if cc == True:
 					seus_inspermons.append(oponente)
 					print("Parabéns! Você agora possui {} como um de seus inspermons!".format(oponente))
@@ -255,6 +261,7 @@ def batalha(jogador,oponente): #Função Batalha
 			
 				if cc == False:
 					print("Foi por pouco! {} se recusa a ter sua liberdade retirada!".format(oponente))
+					
 					if (insperdex[oponente]["Ataque"]-(insperdex[jogador]["Defesa"]+10*niveljog))>0:
 				
 						if vidaopo>0: #Ataque Oponente
@@ -298,12 +305,14 @@ print("Bem Vindo ao Mundo de Inspermon!")
 time.sleep(0.5)
 while True:
 	inicio=str(input("New Game(N) ou Load Game(L)? ")).lower()
+	
 	if inicio=="new game" or inicio=="n":
-		jogador=str(input("Qual seu Inspermon inicial? (Pikaxu, Kapuznakara, Xanaina, Kingnaldo ou Douglas) ")).title()
+		jogador=str(input("Qual seu Inspermon inicial? (Xanaina, Kingnaldo ou Douglas) ")).title()
 		dexjog[jogador]=insperdex[jogador]
 		seus_inspermons.append(jogador)
 		time.sleep(0.5)
 		break
+	
 	if inicio=="load game" or inicio=="l":
 		try:
 			lista_saves=pickle.load(open("lista","rb"))
@@ -315,6 +324,7 @@ while True:
 				dexjog=dado["dados"][0]
 				exp=dado["dados"][1]
 				jogador=dado["dados"][2]
+				seus_inspermons=dado["dados"][3]
 				print("Carregando....")
 				time.sleep(2)
 				print("Sucesso!")
@@ -326,7 +336,7 @@ while True:
 
 
 while True:
-	fazer=str(input("O que você vai fazer? (Passear(P), Dormir(D), Insperdex(I), Salvar(S) ou Trocar Inspermon(T)? ")).lower() #Escolha de ação
+	fazer=str(input("O que você vai fazer? (Passear(P), Dormir(D), Insperdex(I), Salvar(S), Load(L) ou Trocar Inspermon(T)? ")).lower() #Escolha de ação
 	time.sleep(1.0)
 	
 	if fazer == "passear" or fazer == "p": #Caso Passeie
@@ -372,10 +382,10 @@ while True:
 	if fazer == "trocar inspermon" or fazer == "t":
 		print("Seus inspermons atuais são:")
 		for h in range(0,len(seus_inspermons)):
-			print("{}({})".format(seus_inspermons[h],h))
+			print("{}({})".format(seus_inspermons[h],h+1))
 			time.sleep(0.5)
 		hh=int(input("Insira o numero do inspermon desejado :"))
-		jogador=seus_inspermons[hh]
+		jogador=seus_inspermons[hh-1]
 		time.sleep(1.5)
 		print("Seu inspermon agora é {}".format(jogador))
 	
@@ -392,7 +402,7 @@ while True:
 		print("Sucesso!")
 		time.sleep(0.5)
 	
-	"""if fazer == "load" or fazer == "l":
+	if fazer == "load" or fazer == "l":
 		try:
 			lista_saves=pickle.load(open("lista","rb"))
 			if len(lista_saves)>0:
@@ -403,12 +413,13 @@ while True:
 				dexjog=dado["dados"][0]
 				exp=dado["dados"][1]
 				jogador=dado["dados"][2]
+				seus_inspermons=dado["dados"][3]
 				print("Carregando....")
 				time.sleep(2)
 				print("Sucesso!")
 				time.sleep(0.5)
 		except:
-			print("Não há saves ainda!")"""
+			print("Não há saves ainda!")
 
 
 
