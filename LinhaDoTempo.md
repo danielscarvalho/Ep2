@@ -15,3 +15,5 @@ Depois a função do InsperDèx.
 Depois um sistema de exp e evolução.
 
 Depois um sistema de saves.
+
+Depois um sistema de niveis e captura.
