@@ -3,19 +3,19 @@ import random
 import time
 insperdex={
 	"Pikaxu":{
-		"Ataque":50, "Defesa":30, "Vida":200, "Exp":10, "Chance":10, "Evo":20
+		"Ataque":50, "Defesa":30, "Vida":200, "Exp":15, "Chance":10, "Evo":20
 	},
 	"Kapuznakara":{
-		"Ataque":50, "Defesa":30, "Vida":200, "Exp":20, "Chance":7, "Evo":25
+		"Ataque":70, "Defesa":30, "Vida":200, "Exp":20, "Chance":7, "Evo":25
 	}, 
 	"Xanaina":{
 		"Ataque":105, "Defesa":10, "Vida":230, "Exp":30, "Chance":2, "Evo":30
 	},
 	"Kingnaldo":{
-		"Ataque":120, "Defesa":15, "Vida":180, "Exp":35, "Chance":2, "Evo":30   #mudar a evolucao do kingnaldo
+		"Ataque":120, "Defesa":15, "Vida":180, "Exp":35, "Chance":2, "Evo":35   #mudar a evolucao do kingnaldo
 	},
 	"Douglas":{
-		"Ataque":90, "Defesa":25, "Vida":210, "Exp":30, "Chance":2, "Evo":35
+		"Ataque":90, "Defesa":25, "Vida":210, "Exp":30, "Chance":2, "Evo":30
 	},
 	"Cetaxu":{
 		"Ataque":70, "Defesa":50, "Vida":220, "Exp":30, "Chance":0, "Evo":1000
@@ -83,27 +83,49 @@ for i in insperdex:
 
 
 def roll(): #Randomizador
- 	poke= random.randint(0, len(lista_chance))
+ 	poke= random.randint(0, len(lista_chance)-1)
  	aleatorio=lista_chance[poke]
  	return aleatorio
 
 
-def experiencia(xp):
+def experiencia(jogador, oponente, exp):
 	expganha=insperdex[oponente]["Exp"]
-	xp=xp+expganha
-	return xp
+	xpi=exp[seus_inspermons.index(jogador)]
+	posicao=seus_inspermons.index(jogador)
+	xptotal=xpi+expganha
+	exp.remove(exp[posicao])
+	exp.insert(posicao,xptotal)
+	return xptotal
 
+def nivel(niveljog, expj):
+	expj = expj + insperdex[oponente]["Exp"]
+	return  expj
 
 def evolucao(jogador):
 	if jogador == "Pikaxu":
-		return "Cetaxu"
+		posicaopok=seus_inspermons.index("Pikaxu")
+		seus_inspermons.remove("Pikaxu")
+		seus_inspermons.insert(posicaopok,"Cetaxu")
+		return "Cetaxu"		
 	if jogador == "Kapuznakara":
+		posicaopok=seus_inspermons.index("Kapuznakara")
+		seus_inspermons.remove("Kapuznakara")
+		seus_inspermons.insert(posicaopok,"Bonenakara")
 		return "Bonenakara"
 	if jogador == "Xanaina":
+		posicaopok=seus_inspermons.index("Xanaina")
+		seus_inspermons.remove("Xanaina")
+		seus_inspermons.insert(posicaopok,"Xanalna")
 		return "Xanalna"
 	if jogador == "Kingnaldo":
+		posicaopok=seus_inspermons.index("Kingnaldo")
+		seus_inspermons.remove("Kingnaldo")
+		seus_inspermons.insert(posicaopok,"Godnaldo")
 		return "Godnaldo"
 	if jogador == "Douglas":
+		posicaopok=seus_inspermons.index("Douglas")
+		seus_inspermons.remove("Douglas")
+		seus_inspermons.insert(posicaopok,"Showglas")
 		return "Showglas"
 
 
@@ -125,10 +147,10 @@ def batalha(jogador,oponente): #Função Batalha
 	while vidajog>0 and vidaopo>0:
 		
 		if jogador == oponente or oponente in seus_inspermons:
-			acao=str(input("Qual o seu comando? (Lutar(L) ou Fugir(F))")).lower() #Escolha de comando
+			acao=str(input("Qual o seu comando? (Lutar(L) ou Fugir(F) ou Trocar Inspermon(T))")).lower() #Escolha de comando
 
 		else:
-			acao=str(input("Qual o seu comando? (Lutar(L), Fugir(F) ou Capturar(C))")).lower() #Escolha de comando
+			acao=str(input("Qual o seu comando? (Lutar(L), Fugir(F), Capturar(C) ou Trocar Inspermon(T))")).lower() #Escolha de comando
 		
 		if acao == "lutar" or acao == "l": 
 			time.sleep(1.0)
@@ -248,10 +270,10 @@ def batalha(jogador,oponente): #Função Batalha
 				time.sleep(1.0)
 				break
 
-		if acao == "capturar" or acao == "c":
+		if acao == "capturar" or acao == "c": #capturar inspermon
 			time.sleep(1.0)
 			
-			if jogador != oponente:
+			if jogador != oponente and oponente not in seus_inspermons:
 				cc= captura(oponente,vidaopo)
 				
 				if cc == True:
@@ -296,10 +318,51 @@ def batalha(jogador,oponente): #Função Batalha
 			else:
 				print("Você já possui esse inspermon!")
 
+		if acao == "trocar inspermon" or acao == "t":
+			print("Seus inspermons atuais são:")
+			for h in range(0,len(seus_inspermons)):
+				print("{}({})".format(seus_inspermons[h],h+1))
+			time.sleep(0.5)
+			hh=int(input("Insira o numero do inspermon desejado :"))
+			jogador=seus_inspermons[hh-1]
+			time.sleep(1.5)
+			print("Seu inspermon agora é {}".format(jogador))
 
+			if (insperdex[oponente]["Ataque"]-(insperdex[jogador]["Defesa"]+10*niveljog))>0:
 				
+				if vidaopo>0: #Ataque Oponente
+					print("O {} selvagem se prepara para atacar!".format(oponente))
+					time.sleep(1)
+					
+					if critico()==True:
+						vidajog=vidajog-(insperdex[oponente]["Ataque"]-(insperdex[jogador]["Defesa"]+10*niveljog))*1.5
+						
+						if vidajog>0:
+							print("O seu {} é atacado CRITICAMENTE e fica com {} de vida".format(jogador,vidajog))
+							time.sleep(1.0)
+						
+						elif vidajog<=0:
+							print("O seu {} é atacado CRITICAMENTE e desmaia!".format(jogador))
+							time.sleep(1.0)
+					
+					else:
+						vidajog=vidajog-(insperdex[oponente]["Ataque"]-(insperdex[jogador]["Defesa"]+10*niveljog))
+						
+						if vidajog>0:
+							print("O seu {} é atacado e fica com {} de vida".format(jogador,vidajog))
+							time.sleep(1.0)
+						
+						elif vidajog<=0:
+							print("O seu {} é atacado e desmaia!".format(jogador))
+							time.sleep(1.0)
+			
+			elif (insperdex[oponente]["Ataque"]-(insperdex[jogador]["Defesa"]+10*niveljog))<=0:
+				print("O ataque do {} não deu dano!".format(oponente))
+
+
+expj=0	#experiencia jogador			
 niveljog=1
-exp=0
+exp=[0,0,0,0,0,0,0,0,0,0]	#experiencia pokemons
 lista_saves=[]
 print("Bem Vindo ao Mundo de Inspermon!")
 time.sleep(0.5)
@@ -307,11 +370,14 @@ while True:
 	inicio=str(input("New Game(N) ou Load Game(L)? ")).lower()
 	
 	if inicio=="new game" or inicio=="n":
-		jogador=str(input("Qual seu Inspermon inicial? (Xanaina, Kingnaldo ou Douglas) ")).title()
-		dexjog[jogador]=insperdex[jogador]
-		seus_inspermons.append(jogador)
-		time.sleep(0.5)
-		break
+		try:
+			jogador=str(input("Qual seu Inspermon inicial? (Xanaina, Kingnaldo ou Douglas) ")).title()
+			dexjog[jogador]=insperdex[jogador]
+			seus_inspermons.append(jogador)
+			time.sleep(0.5)
+			break
+		except: #se o usuario digitar o nome do inspermon errado, o codigo nao para
+			continue
 	
 	if inicio=="load game" or inicio=="l":
 		try:
@@ -343,33 +409,45 @@ while True:
 		print("Passeando...")
 		time.sleep(1.5) 
 		oponente=roll()
-		
+		expneeded = 50*niveljog*(1.1**niveljog)
+
 		if batalha(jogador,oponente)==True:
-			exp=experiencia(exp)
-		print("Seu {} possui {} de experiência".format(jogador,exp))
-		time.sleep(0.5)
-		
-		if exp >=insperdex[jogador]["Evo"]:
-			seus_inspermons.remove(jogador)
-			jogador=evolucao(jogador)
-			print(".")
-			time.sleep(0.2)
-			print(".")
-			time.sleep(0.2)
-			print(".")
-			time.sleep(0.2)
-			print("O seu pokemon evolui para...")
+			expe = experiencia(jogador, oponente, exp)
+			expj = nivel(niveljog,expj)
+			posicao=seus_inspermons.index(jogador)
+			print("Seu {} possui {} de experiência".format(jogador,exp[posicao]))
 			time.sleep(0.5)
-			print(("{} !!".format(jogador)).upper())
-			time.sleep(2.0)
-			print("Os stats do {} são:".format(jogador))
-			print("Ataque: {}".format(insperdex[jogador]["Ataque"]))
-			print("Defesa: {}".format(insperdex[jogador]["Defesa"]))
-			print("Vida: {}".format(insperdex[jogador]["Vida"]))
-	
-			dexjog[jogador]=insperdex[jogador]
-			seus_inspermons.append(jogador)
 		
+			if expe >=insperdex[jogador]["Evo"]:
+				jogador=evolucao(jogador)
+				print(".")
+				time.sleep(0.2)
+				print(".")
+				time.sleep(0.2)
+				print(".")
+				time.sleep(0.2)
+				print("O seu inspermon evolui para...")
+				time.sleep(0.5)
+				print(("{} !!".format(jogador)).upper())
+				time.sleep(2.0)
+				print("")
+				print("Os stats do {} são:".format(jogador))
+				print("Ataque: {}".format(insperdex[jogador]["Ataque"]))
+				print("Defesa: {}".format(insperdex[jogador]["Defesa"]))
+				print("Vida: {}".format(insperdex[jogador]["Vida"]))
+	
+				dexjog[jogador]=insperdex[jogador]
+
+		if expneeded <= expj and niveljog < 10:
+			niveljog = niveljog + 1
+			time.sleep(1)
+			print("Parabens! Você passou de nível!".format(expneeded))
+			time.sleep(1)
+			print("Agora seu nível é {}".format(niveljog))
+			time.sleep(1)
+			if niveljog == 10:
+				print("Você atingiu o nível máximo!")
+				time.sleep(1)
 
 	if fazer == "dormir" or fazer == "d": #Caso durma
 		print("Bons Sonhos!")
