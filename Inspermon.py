@@ -56,6 +56,11 @@ def critico(): #Função Critico
 		return False 
 
 
+def nivelopo(niveljog):
+	nvlopo=random.randint(niveljog-1,niveljog+1)
+	return nvlopo
+
+
 def luta(): #Função Fuga
 	if random.randint(1,10) <=3:
 		return True
@@ -90,8 +95,8 @@ def roll(): #Randomizador
 
 def experiencia(jogador, oponente, exp):
 	expganha=insperdex[oponente]["Exp"]
-	xpi=exp[seus_inspermons.index(jogador)]
 	posicao=seus_inspermons.index(jogador)
+	xpi=exp[posicao]
 	xptotal=xpi+expganha
 	exp.remove(exp[posicao])
 	exp.insert(posicao,xptotal)
@@ -129,10 +134,14 @@ def evolucao(jogador):
 		return "Showglas"
 
 
-def batalha(jogador,oponente): #Função Batalha
+def batalha(jogador,oponente,niveljog): #Função Batalha
+	if niveljog>1:
+		nvlopo=nivelopo(niveljog)
+	elif niveljog==1:
+		nvlopo=1
 	vidajog=insperdex[jogador]["Vida"]+10*niveljog
-	vidaopo=insperdex[oponente]["Vida"]
-	print("Você encontrou um {} selvagem!".format(oponente))
+	vidaopo=insperdex[oponente]["Vida"]+10*nvlopo
+	print("Você encontrou um {} selvagem nível {}!".format(oponente,nvlopo))
 	time.sleep(1.0)
 	print("O seu oponente tem: ")
 	print("Ataque: {}".format(insperdex[oponente]["Ataque"]))
@@ -155,12 +164,12 @@ def batalha(jogador,oponente): #Função Batalha
 		if acao == "lutar" or acao == "l": 
 			time.sleep(1.0)
 			
-			if ((insperdex[jogador]["Ataque"]+10*niveljog)-insperdex[oponente]["Defesa"])>0:
+			if ((insperdex[jogador]["Ataque"]+10*niveljog)-(insperdex[oponente]["Defesa"]+10*nvlopo))>0:
 				
 				if vidajog>0: #Ataque Jogador
 					
 					if critico()==True:
-						vidaopo=vidaopo-((insperdex[jogador]["Ataque"]+10*niveljog)-insperdex[oponente]["Defesa"])*1.5
+						vidaopo=vidaopo-((insperdex[jogador]["Ataque"]+10*niveljog)-(insperdex[oponente]["Defesa"]+10*nvlopo))*1.5
 						
 						if vidaopo>0:
 							print("O {} leva um ataque CRÍTICO e fica com {} de vida".format(oponente,vidaopo))
@@ -171,7 +180,7 @@ def batalha(jogador,oponente): #Função Batalha
 							time.sleep(1.0)
 					
 					else:
-						vidaopo=vidaopo-((insperdex[jogador]["Ataque"]+10*niveljog)-insperdex[oponente]["Defesa"])
+						vidaopo=vidaopo-((insperdex[jogador]["Ataque"]+10*niveljog)-(insperdex[oponente]["Defesa"]+10*nvlopo))
 						
 						if vidaopo>0:
 							print("O {} leva o ataque e fica com {} de vida".format(oponente,vidaopo))
@@ -181,18 +190,18 @@ def batalha(jogador,oponente): #Função Batalha
 							print("O {} leva o ataque e desmaia!".format(oponente))
 							time.sleep(1.0)
 			
-			elif ((insperdex[jogador]["Ataque"]+10*niveljog)-insperdex[oponente]["Defesa"])<=0:
+			elif ((insperdex[jogador]["Ataque"]+10*niveljog)-(insperdex[oponente]["Defesa"]+10*nvlopo))<=0:
 				print("O seu ataque não deu dano!")
 			
 			
-			if (insperdex[oponente]["Ataque"]-(insperdex[jogador]["Defesa"]+10*niveljog))>0:
+			if ((insperdex[oponente]["Ataque"]+10*nvlopo)-(insperdex[jogador]["Defesa"]+10*niveljog))>0:
 				
 				if vidaopo>0: #Ataque Oponente
 					print("O {} selvagem se prepara para atacar!".format(oponente))
 					time.sleep(1)
 					
 					if critico()==True:
-						vidajog=vidajog-(insperdex[oponente]["Ataque"]-(insperdex[jogador]["Defesa"]+10*niveljog))*1.5
+						vidajog=vidajog-((insperdex[oponente]["Ataque"]+10*nvlopo)-(insperdex[jogador]["Defesa"]+10*niveljog))*1.5
 						
 						if vidajog>0:
 							print("O seu {} é atacado CRITICAMENTE e fica com {} de vida".format(jogador,vidajog))
@@ -205,7 +214,7 @@ def batalha(jogador,oponente): #Função Batalha
 							time.sleep(1.0)
 					
 					else:
-						vidajog=vidajog-(insperdex[oponente]["Ataque"]-(insperdex[jogador]["Defesa"]+10*niveljog))
+						vidajog=vidajog-((insperdex[oponente]["Ataque"]+10*nvlopo)-(insperdex[jogador]["Defesa"]+10*niveljog))
 						
 						if vidajog>0:
 							print("O seu {} é atacado e fica com {} de vida".format(jogador,vidajog))
@@ -215,7 +224,7 @@ def batalha(jogador,oponente): #Função Batalha
 							print("O seu {} é atacado e desmaia!".format(jogador))
 							time.sleep(1.0)
 			
-			elif (insperdex[oponente]["Ataque"]-(insperdex[jogador]["Defesa"]+10*niveljog))<=0:
+			elif ((insperdex[oponente]["Ataque"]+10*nvlopo)-(insperdex[jogador]["Defesa"]+10*niveljog))<=0:
 				print("O ataque do {} não deu dano!".format(oponente))
 			
 			if vidaopo<=0: #Resultado Batalha
@@ -235,14 +244,14 @@ def batalha(jogador,oponente): #Função Batalha
 				print("Fuga Falhou!")
 				time.sleep(1.0)
 				
-				if (insperdex[oponente]["Ataque"]-(insperdex[jogador]["Defesa"]+10*niveljog))>0:
+				if ((insperdex[oponente]["Ataque"]+10*nvlopo)-(insperdex[jogador]["Defesa"]+10*niveljog))>0:
 				
 					if vidaopo>0: #Ataque Oponente
 						print("O {} selvagem se prepara para atacar!".format(oponente))
 						time.sleep(1)
 						
 						if critico()==True:
-							vidajog=vidajog-(insperdex[oponente]["Ataque"]-(insperdex[jogador]["Defesa"]+10*niveljog))*1.5
+							vidajog=vidajog-((insperdex[oponente]["Ataque"]+10*nvlopo)-(insperdex[jogador]["Defesa"]+10*niveljog))*1.5
 							
 							if vidajog>0:
 								print("O seu {} é atacado CRITICAMENTE e fica com {} de vida".format(jogador,vidajog))
@@ -253,7 +262,7 @@ def batalha(jogador,oponente): #Função Batalha
 								time.sleep(1.0)
 						
 						else:
-							vidajog=vidajog-(insperdex[oponente]["Ataque"]-(insperdex[jogador]["Defesa"]+10*niveljog))
+							vidajog=vidajog-((insperdex[oponente]["Ataque"]+10*nvlopo)-(insperdex[jogador]["Defesa"]+10*niveljog))
 							
 							if vidajog>0:
 								print("O seu {} é atacado e fica com {} de vida".format(jogador,vidajog))
@@ -263,7 +272,7 @@ def batalha(jogador,oponente): #Função Batalha
 								print("O seu {} é atacado e desmaia!".format(jogador))
 								time.sleep(1.0)
 				
-				elif (insperdex[oponente]["Ataque"]-(insperdex[jogador]["Defesa"]+10*niveljog))<=0:
+				elif ((insperdex[oponente]["Ataque"]+10*nvlopo)-(insperdex[jogador]["Defesa"]+10*niveljog))<=0:
 					print("O ataque do {} não deu dano!".format(oponente))
 			else:
 				print("Fuga Sucedida")
@@ -284,14 +293,14 @@ def batalha(jogador,oponente): #Função Batalha
 				if cc == False:
 					print("Foi por pouco! {} se recusa a ter sua liberdade retirada!".format(oponente))
 					
-					if (insperdex[oponente]["Ataque"]-(insperdex[jogador]["Defesa"]+10*niveljog))>0:
+					if ((insperdex[oponente]["Ataque"]+10*nvlopo)-(insperdex[jogador]["Defesa"]+10*niveljog))>0:
 				
 						if vidaopo>0: #Ataque Oponente
 							print("O {} selvagem se prepara para atacar!".format(oponente))
 							time.sleep(1)
 					
 							if critico()==True:
-								vidajog=vidajog-(insperdex[oponente]["Ataque"]-(insperdex[jogador]["Defesa"]+10*niveljog))*1.5
+								vidajog=vidajog-((insperdex[oponente]["Ataque"]+10*nvlopo)-(insperdex[jogador]["Defesa"]+10*niveljog))*1.5
 						
 								if vidajog>0:
 									print("O seu {} é atacado CRITICAMENTE e fica com {} de vida".format(jogador,vidajog))
@@ -302,7 +311,7 @@ def batalha(jogador,oponente): #Função Batalha
 									time.sleep(1.0)
 					
 							else:
-								vidajog=vidajog-(insperdex[oponente]["Ataque"]-(insperdex[jogador]["Defesa"]+10*niveljog))
+								vidajog=vidajog-((insperdex[oponente]["Ataque"]+10*nvlopo)-(insperdex[jogador]["Defesa"]+10*niveljog))
 						
 								if vidajog>0:
 									print("O seu {} é atacado e fica com {} de vida".format(jogador,vidajog))
@@ -312,7 +321,7 @@ def batalha(jogador,oponente): #Função Batalha
 									print("O seu {} é atacado e desmaia!".format(jogador))
 									time.sleep(1.0)
 			
-					elif (insperdex[oponente]["Ataque"]-(insperdex[jogador]["Defesa"]+10*niveljog))<=0:
+					elif ((insperdex[oponente]["Ataque"]+10*nvlopo)-(insperdex[jogador]["Defesa"]+10*niveljog))<=0:
 						print("O ataque do {} não deu dano!".format(oponente))
 
 			else:
@@ -328,14 +337,14 @@ def batalha(jogador,oponente): #Função Batalha
 			time.sleep(1.5)
 			print("Seu inspermon agora é {}".format(jogador))
 
-			if (insperdex[oponente]["Ataque"]-(insperdex[jogador]["Defesa"]+10*niveljog))>0:
+			if ((insperdex[oponente]["Ataque"]+10*nvlopo)-(insperdex[jogador]["Defesa"]+10*niveljog))>0:
 				
 				if vidaopo>0: #Ataque Oponente
 					print("O {} selvagem se prepara para atacar!".format(oponente))
 					time.sleep(1)
 					
 					if critico()==True:
-						vidajog=vidajog-(insperdex[oponente]["Ataque"]-(insperdex[jogador]["Defesa"]+10*niveljog))*1.5
+						vidajog=vidajog-((insperdex[oponente]["Ataque"]+10*nvlopo)-(insperdex[jogador]["Defesa"]+10*niveljog))*1.5
 						
 						if vidajog>0:
 							print("O seu {} é atacado CRITICAMENTE e fica com {} de vida".format(jogador,vidajog))
@@ -346,7 +355,7 @@ def batalha(jogador,oponente): #Função Batalha
 							time.sleep(1.0)
 					
 					else:
-						vidajog=vidajog-(insperdex[oponente]["Ataque"]-(insperdex[jogador]["Defesa"]+10*niveljog))
+						vidajog=vidajog-((insperdex[oponente]["Ataque"]+10*nvlopo)-(insperdex[jogador]["Defesa"]+10*niveljog))
 						
 						if vidajog>0:
 							print("O seu {} é atacado e fica com {} de vida".format(jogador,vidajog))
@@ -356,7 +365,7 @@ def batalha(jogador,oponente): #Função Batalha
 							print("O seu {} é atacado e desmaia!".format(jogador))
 							time.sleep(1.0)
 			
-			elif (insperdex[oponente]["Ataque"]-(insperdex[jogador]["Defesa"]+10*niveljog))<=0:
+			elif ((insperdex[oponente]["Ataque"]+10*nvlopo)-(insperdex[jogador]["Defesa"]+10*niveljog))<=0:
 				print("O ataque do {} não deu dano!".format(oponente))
 
 
