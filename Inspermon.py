@@ -139,7 +139,10 @@ def batalha(jogador,oponente,niveljog): #Função Batalha
 		nvlopo=nivelopo(niveljog)
 	elif niveljog==1:
 		nvlopo=1
-	vidajog=insperdex[jogador]["Vida"]+10*niveljog
+	listavida=[]
+	for i in seus_inspermons:
+		listavida.append(insperdex[i]["Vida"]+10*niveljog)
+	vidajog=listavida[seus_inspermons.index(jogador)]
 	vidaopo=insperdex[oponente]["Vida"]+10*nvlopo
 	print("Você encontrou um {} selvagem nível {}!".format(oponente,nvlopo))
 	time.sleep(1.0)
@@ -328,12 +331,14 @@ def batalha(jogador,oponente,niveljog): #Função Batalha
 				print("Você já possui esse inspermon!")
 
 		if acao == "trocar inspermon" or acao == "t":
+			listavida[seus_inspermons.index(jogador)]=vidajog
 			print("Seus inspermons atuais são:")
 			for h in range(0,len(seus_inspermons)):
 				print("{}({})".format(seus_inspermons[h],h+1))
 			time.sleep(0.5)
 			hh=int(input("Insira o numero do inspermon desejado :"))
 			jogador=seus_inspermons[hh-1]
+			vidajog=listavida[seus_inspermons.index(jogador)]
 			time.sleep(1.5)
 			print("Seu inspermon agora é {}".format(jogador))
 
@@ -420,7 +425,7 @@ while True:
 		oponente=roll()
 		expneeded = 50*niveljog*(1.1**niveljog)
 
-		if batalha(jogador,oponente)==True:
+		if batalha(jogador,oponente,niveljog)==True:
 			expe = experiencia(jogador, oponente, exp)
 			expj = nivel(niveljog,expj)
 			posicao=seus_inspermons.index(jogador)
