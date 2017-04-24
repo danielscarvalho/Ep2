@@ -141,8 +141,8 @@ def batalha(jogador,oponente,niveljog): #Função Batalha
 		nvlopo=1
 	listavida=[]
 	for i in seus_inspermons:
-		listavida.append(insperdex[i]["Vida"])
-	vidajog=insperdex[jogador]["Vida"]+10*niveljog
+		listavida.append(insperdex[i]["Vida"]+10*niveljog)
+	vidajog=listavida[seus_inspermons.index(jogador)]
 	vidaopo=insperdex[oponente]["Vida"]+10*nvlopo
 	print("Você encontrou um {} selvagem nível {}!".format(oponente,nvlopo))
 	time.sleep(1.0)
@@ -338,7 +338,7 @@ def batalha(jogador,oponente,niveljog): #Função Batalha
 			time.sleep(0.5)
 			hh=int(input("Insira o numero do inspermon desejado :"))
 			jogador=seus_inspermons[hh-1]
-			vidajog=listavida[seus_inspermons.index(jogador)]+10*niveljog
+			vidajog=listavida[seus_inspermons.index(jogador)]
 			time.sleep(1.5)
 			print("Seu inspermon agora é {}".format(jogador))
 
