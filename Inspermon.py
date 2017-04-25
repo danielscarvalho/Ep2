@@ -12,7 +12,7 @@ insperdex={
 		"Ataque":105, "Defesa":10, "Vida":230, "Exp":30, "Chance":2, "Evo":30
 	},
 	"Kingnaldo":{
-		"Ataque":120, "Defesa":15, "Vida":180, "Exp":35, "Chance":2, "Evo":35   #mudar a evolucao do kingnaldo
+		"Ataque":120, "Defesa":15, "Vida":180, "Exp":35, "Chance":2, "Evo":35  
 	},
 	"Douglas":{
 		"Ataque":90, "Defesa":25, "Vida":210, "Exp":30, "Chance":2, "Evo":30
@@ -40,7 +40,7 @@ seus_inspermons=[] #Lista com seus inspermons
 
 def save(arquivo):
 	dados= open(arquivo,'wb') 
-	pickle.dump({"dados" : [dexjog, exp, jogador,seus_inspermons]}, dados)
+	pickle.dump({"dados" : [dexjog, exp, jogador,seus_inspermons,niveljog,expj]}, dados)
 	dados.close()
 
 
@@ -290,6 +290,7 @@ def batalha(jogador,oponente,niveljog): #Função Batalha
 				
 				if cc == True:
 					seus_inspermons.append(oponente)
+					exp.append(0)
 					print("Parabéns! Você agora possui {} como um de seus inspermons!".format(oponente))
 					break
 			
@@ -376,7 +377,7 @@ def batalha(jogador,oponente,niveljog): #Função Batalha
 
 expj=0	#experiencia jogador			
 niveljog=1
-exp=[0,0,0,0,0,0,0,0,0,0]	#experiencia pokemons
+exp=[]	#experiencia pokemons
 lista_saves=[]
 print("Bem Vindo ao Mundo de Inspermon!")
 time.sleep(0.5)
@@ -388,6 +389,7 @@ while True:
 			jogador=str(input("Qual seu Inspermon inicial? (Xanaina, Kingnaldo ou Douglas) ")).title()
 			dexjog[jogador]=insperdex[jogador]
 			seus_inspermons.append(jogador)
+			exp.append(0)
 			time.sleep(0.5)
 			break
 		except: #se o usuario digitar o nome do inspermon errado, o codigo nao para
@@ -405,6 +407,8 @@ while True:
 				exp=dado["dados"][1]
 				jogador=dado["dados"][2]
 				seus_inspermons=dado["dados"][3]
+				niveljog=dado["dados"][4]
+				expj=dado["dados"][5]
 				print("Carregando....")
 				time.sleep(2)
 				print("Sucesso!")
@@ -506,6 +510,8 @@ while True:
 				exp=dado["dados"][1]
 				jogador=dado["dados"][2]
 				seus_inspermons=dado["dados"][3]
+				niveljog=dado["dados"][4]
+				expj=dado["dados"][5]
 				print("Carregando....")
 				time.sleep(2)
 				print("Sucesso!")
