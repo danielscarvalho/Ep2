@@ -17,3 +17,5 @@ Depois um sistema de exp e evolução.
 Depois um sistema de saves.
 
 Depois um sistema de niveis e captura.
+
+Depois demos um polish final.
