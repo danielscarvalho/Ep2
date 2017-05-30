@@ -1,0 +1,1435 @@
+************* Module Inspermon
+W: 35, 0: Cannot decode using encoding "ascii", unexpected byte at position 9 (invalid-encoded-data)
+W: 52, 0: Cannot decode using encoding "ascii", unexpected byte at position 19 (invalid-encoded-data)
+W: 64, 0: Cannot decode using encoding "ascii", unexpected byte at position 16 (invalid-encoded-data)
+W: 71, 0: Cannot decode using encoding "ascii", unexpected byte at position 35 (invalid-encoded-data)
+W:137, 0: Cannot decode using encoding "ascii", unexpected byte at position 44 (invalid-encoded-data)
+W:147, 0: Cannot decode using encoding "ascii", unexpected byte at position 11 (invalid-encoded-data)
+W:153, 0: Cannot decode using encoding "ascii", unexpected byte at position 25 (invalid-encoded-data)
+W:178, 0: Cannot decode using encoding "ascii", unexpected byte at position 36 (invalid-encoded-data)
+W:182, 0: Cannot decode using encoding "ascii", unexpected byte at position 36 (invalid-encoded-data)
+W:197, 0: Cannot decode using encoding "ascii", unexpected byte at position 25 (invalid-encoded-data)
+W:210, 0: Cannot decode using encoding "ascii", unexpected byte at position 23 (invalid-encoded-data)
+W:214, 0: Cannot decode using encoding "ascii", unexpected byte at position 23 (invalid-encoded-data)
+W:223, 0: Cannot decode using encoding "ascii", unexpected byte at position 23 (invalid-encoded-data)
+W:227, 0: Cannot decode using encoding "ascii", unexpected byte at position 23 (invalid-encoded-data)
+W:231, 0: Cannot decode using encoding "ascii", unexpected byte at position 27 (invalid-encoded-data)
+W:234, 0: Cannot decode using encoding "ascii", unexpected byte at position 15 (invalid-encoded-data)
+W:239, 0: Cannot decode using encoding "ascii", unexpected byte at position 14 (invalid-encoded-data)
+W:260, 0: Cannot decode using encoding "ascii", unexpected byte at position 24 (invalid-encoded-data)
+W:264, 0: Cannot decode using encoding "ascii", unexpected byte at position 24 (invalid-encoded-data)
+W:271, 0: Cannot decode using encoding "ascii", unexpected byte at position 24 (invalid-encoded-data)
+W:275, 0: Cannot decode using encoding "ascii", unexpected byte at position 24 (invalid-encoded-data)
+W:279, 0: Cannot decode using encoding "ascii", unexpected byte at position 28 (invalid-encoded-data)
+W:294, 0: Cannot decode using encoding "ascii", unexpected byte at position 17 (invalid-encoded-data)
+W:310, 0: Cannot decode using encoding "ascii", unexpected byte at position 25 (invalid-encoded-data)
+W:314, 0: Cannot decode using encoding "ascii", unexpected byte at position 25 (invalid-encoded-data)
+W:321, 0: Cannot decode using encoding "ascii", unexpected byte at position 25 (invalid-encoded-data)
+W:325, 0: Cannot decode using encoding "ascii", unexpected byte at position 25 (invalid-encoded-data)
+W:329, 0: Cannot decode using encoding "ascii", unexpected byte at position 29 (invalid-encoded-data)
+W:332, 0: Cannot decode using encoding "ascii", unexpected byte at position 14 (invalid-encoded-data)
+W:336, 0: Cannot decode using encoding "ascii", unexpected byte at position 34 (invalid-encoded-data)
+W:344, 0: Cannot decode using encoding "ascii", unexpected byte at position 30 (invalid-encoded-data)
+W:356, 0: Cannot decode using encoding "ascii", unexpected byte at position 23 (invalid-encoded-data)
+W:360, 0: Cannot decode using encoding "ascii", unexpected byte at position 23 (invalid-encoded-data)
+W:367, 0: Cannot decode using encoding "ascii", unexpected byte at position 23 (invalid-encoded-data)
+W:371, 0: Cannot decode using encoding "ascii", unexpected byte at position 23 (invalid-encoded-data)
+W:375, 0: Cannot decode using encoding "ascii", unexpected byte at position 27 (invalid-encoded-data)
+W:402, 0: Cannot decode using encoding "ascii", unexpected byte at position 26 (invalid-encoded-data)
+W:416, 0: Cannot decode using encoding "ascii", unexpected byte at position 27 (invalid-encoded-data)
+W:419, 0: Cannot decode using encoding "ascii", unexpected byte at position 11 (invalid-encoded-data)
+W:423, 0: Cannot decode using encoding "ascii", unexpected byte at position 27 (invalid-encoded-data)
+W:436, 0: Cannot decode using encoding "ascii", unexpected byte at position 36 (invalid-encoded-data)
+W:452, 0: Cannot decode using encoding "ascii", unexpected byte at position 27 (invalid-encoded-data)
+W:462, 0: Cannot decode using encoding "ascii", unexpected byte at position 23 (invalid-encoded-data)
+W:464, 0: Cannot decode using encoding "ascii", unexpected byte at position 21 (invalid-encoded-data)
+W:467, 0: Cannot decode using encoding "ascii", unexpected byte at position 14 (invalid-encoded-data)
+W:475, 0: Cannot decode using encoding "ascii", unexpected byte at position 15 (invalid-encoded-data)
+W:479, 0: Cannot decode using encoding "ascii", unexpected byte at position 33 (invalid-encoded-data)
+W:486, 0: Cannot decode using encoding "ascii", unexpected byte at position 29 (invalid-encoded-data)
+W:489, 0: Cannot decode using encoding "ascii", unexpected byte at position 24 (invalid-encoded-data)
+W:505, 0: Cannot decode using encoding "ascii", unexpected byte at position 26 (invalid-encoded-data)
+W:520, 0: Cannot decode using encoding "ascii", unexpected byte at position 11 (invalid-encoded-data)
+C:  4, 0: Exactly one space required around assignment
+insperdex={
+         ^ (bad-whitespace)
+C:  5, 0: Wrong hanging indentation (add 3 spaces).
+	"Pikaxu":{
+ ^  | (bad-continuation)
+C:  6, 0: Wrong hanging indentation (add 10 spaces).
+		"Ataque":50, "Defesa":30, "Vida":200, "Exp":15, "Chance":10, "Evo":20
+  ^         | (bad-continuation)
+C:  7, 0: Wrong hanging indentation.
+	},
+ ^      |   | (bad-continuation)
+C:  8, 0: Wrong hanging indentation (add 3 spaces).
+	"Kapuznakara":{
+ ^  | (bad-continuation)
+C:  9, 0: Wrong hanging indentation (add 10 spaces).
+		"Ataque":70, "Defesa":30, "Vida":200, "Exp":20, "Chance":7, "Evo":25
+  ^         | (bad-continuation)
+C: 10, 0: Wrong hanging indentation.
+	}, 
+ ^      |   | (bad-continuation)
+C: 10, 0: Trailing whitespace (trailing-whitespace)
+C: 11, 0: Wrong hanging indentation (add 3 spaces).
+	"Xanaina":{
+ ^  | (bad-continuation)
+C: 12, 0: Wrong hanging indentation (add 10 spaces).
+		"Ataque":105, "Defesa":10, "Vida":230, "Exp":30, "Chance":2, "Evo":30
+  ^         | (bad-continuation)
+C: 13, 0: Wrong hanging indentation.
+	},
+ ^      |   | (bad-continuation)
+C: 14, 0: Wrong hanging indentation (add 3 spaces).
+	"Kingnaldo":{
+ ^  | (bad-continuation)
+C: 15, 0: Wrong hanging indentation (add 10 spaces).
+		"Ataque":120, "Defesa":15, "Vida":180, "Exp":35, "Chance":2, "Evo":35  
+  ^         | (bad-continuation)
+C: 15, 0: Trailing whitespace (trailing-whitespace)
+C: 16, 0: Wrong hanging indentation.
+	},
+ ^      |   | (bad-continuation)
+C: 17, 0: Wrong hanging indentation (add 3 spaces).
+	"Douglas":{
+ ^  | (bad-continuation)
+C: 18, 0: Wrong hanging indentation (add 10 spaces).
+		"Ataque":90, "Defesa":25, "Vida":210, "Exp":30, "Chance":2, "Evo":30
+  ^         | (bad-continuation)
+C: 19, 0: Wrong hanging indentation.
+	},
+ ^      |   | (bad-continuation)
+C: 20, 0: Wrong hanging indentation (add 3 spaces).
+	"Cetaxu":{
+ ^  | (bad-continuation)
+C: 21, 0: Wrong hanging indentation (add 10 spaces).
+		"Ataque":70, "Defesa":50, "Vida":220, "Exp":30, "Chance":0, "Evo":1000
+  ^         | (bad-continuation)
+C: 22, 0: Wrong hanging indentation.
+	},
+ ^      |   | (bad-continuation)
+C: 23, 0: Wrong hanging indentation (add 3 spaces).
+	"Bonenakara":{
+ ^  | (bad-continuation)
+C: 24, 0: Wrong hanging indentation (add 10 spaces).
+		"Ataque":70, "Defesa":50, "Vida":220, "Exp":30, "Chance":0, "Evo":1000
+  ^         | (bad-continuation)
+C: 25, 0: Wrong hanging indentation.
+	}, 
+ ^      |   | (bad-continuation)
+C: 25, 0: Trailing whitespace (trailing-whitespace)
+C: 26, 0: Wrong hanging indentation (add 3 spaces).
+	"Xanalna":{
+ ^  | (bad-continuation)
+C: 27, 0: Wrong hanging indentation (add 10 spaces).
+		"Ataque":120, "Defesa":30, "Vida":240, "Exp":30, "Chance":0, "Evo":1000
+  ^         | (bad-continuation)
+C: 28, 0: Wrong hanging indentation.
+	},
+ ^      |   | (bad-continuation)
+C: 29, 0: Wrong hanging indentation (add 3 spaces).
+	"Godnaldo":{
+ ^  | (bad-continuation)
+C: 30, 0: Wrong hanging indentation (add 10 spaces).
+		"Ataque":140, "Defesa":35, "Vida":200, "Exp":30, "Chance":0, "Evo":1000
+  ^         | (bad-continuation)
+C: 31, 0: Wrong hanging indentation.
+	},
+ ^      |   | (bad-continuation)
+C: 32, 0: Wrong hanging indentation (add 3 spaces).
+	"Showglas":{
+ ^  | (bad-continuation)
+C: 33, 0: Wrong hanging indentation (add 10 spaces).
+		"Ataque":110, "Defesa":45, "Vida":230, "Exp":30, "Chance":0, "Evo":1000
+  ^         | (bad-continuation)
+C: 34, 0: Wrong hanging indentation.
+	}
+ ^      |   | (bad-continuation)
+C: 37, 0: Exactly one space required around assignment
+dexjog={} #InsperDex
+      ^ (bad-whitespace)
+C: 38, 0: Exactly one space required around assignment
+seus_inspermons=[] #Lista com seus inspermons
+               ^ (bad-whitespace)
+C: 42, 0: Trailing whitespace (trailing-whitespace)
+W: 42, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 42, 0: Exactly one space required before assignment
+	dados= open(arquivo,'wb') 
+      ^ (bad-whitespace)
+C: 42, 0: Exactly one space required after comma
+	dados= open(arquivo,'wb') 
+                    ^ (bad-whitespace)
+W: 43, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 43, 0: Exactly one space required after comma
+	pickle.dump({"dados" : [dexjog, exp, jogador,seus_inspermons,niveljog,expj]}, dados)
+                                             ^ (bad-whitespace)
+C: 43, 0: Exactly one space required after comma
+	pickle.dump({"dados" : [dexjog, exp, jogador,seus_inspermons,niveljog,expj]}, dados)
+                                                             ^ (bad-whitespace)
+C: 43, 0: Exactly one space required after comma
+	pickle.dump({"dados" : [dexjog, exp, jogador,seus_inspermons,niveljog,expj]}, dados)
+                                                                      ^ (bad-whitespace)
+W: 44, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 48, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 48, 0: Exactly one space required around assignment
+	dado=pickle.load(open(arquivo,"rb"))
+     ^ (bad-whitespace)
+C: 48, 0: Exactly one space required after comma
+	dado=pickle.load(open(arquivo,"rb"))
+                              ^ (bad-whitespace)
+W: 49, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 53, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 53, 0: Exactly one space required after comma
+	if random.randint(1,100)<= 20:
+                    ^ (bad-whitespace)
+C: 53, 0: Exactly one space required before comparison
+	if random.randint(1,100)<= 20:
+                         ^^ (bad-whitespace)
+W: 54, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 55, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 56, 0: Trailing whitespace (trailing-whitespace)
+W: 56, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 60, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 60, 0: Exactly one space required around assignment
+	nvlopo=random.randint(niveljog-1,niveljog+1)
+       ^ (bad-whitespace)
+C: 60, 0: Exactly one space required after comma
+	nvlopo=random.randint(niveljog-1,niveljog+1)
+                                 ^ (bad-whitespace)
+W: 61, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 65, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 65, 0: Exactly one space required after comma
+	if random.randint(1,10) <=3:
+                    ^ (bad-whitespace)
+C: 65, 0: Exactly one space required after comparison
+	if random.randint(1,10) <=3:
+                         ^^ (bad-whitespace)
+W: 66, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 67, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 68, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 71, 0: Exactly one space required after comma
+def captura(oponente,vidaopo): #Função captura
+                    ^ (bad-whitespace)
+W: 72, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 72, 0: Exactly one space required after comma
+	if random.randint(1,100) >=int(round((vidaopo/insperdex[oponente]["Vida"])*85+10)):
+                    ^ (bad-whitespace)
+C: 72, 0: Exactly one space required after comparison
+	if random.randint(1,100) >=int(round((vidaopo/insperdex[oponente]["Vida"])*85+10)):
+                          ^^ (bad-whitespace)
+W: 73, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 74, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 75, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 78, 0: Exactly one space required around assignment
+lista_evo=[]
+         ^ (bad-whitespace)
+C: 79, 0: Exactly one space required around assignment
+lista_chance=[] #Lista de chance de encontro no passeio
+            ^ (bad-whitespace)
+W: 81, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 81, 0: Exactly one space required around comparison
+	if insperdex[i]["Chance"]>0:
+                          ^ (bad-whitespace)
+W: 82, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 82, 0: Exactly one space required around assignment
+		x=0
+   ^ (bad-whitespace)
+W: 83, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 83, 0: Exactly one space required around comparison
+		while x<insperdex[i]["Chance"]:
+         ^ (bad-whitespace)
+W: 84, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 85, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 85, 0: Exactly one space required around assignment
+			x=x+1
+    ^ (bad-whitespace)
+W: 86, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 86, 0: Exactly one space required around comparison
+	elif insperdex[i]["Chance"]<=0:
+                            ^^ (bad-whitespace)
+W: 87, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 91, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 91, 0: Exactly one space required before assignment
+ 	poke= random.randint(0, len(lista_chance)-1)
+      ^ (bad-whitespace)
+W: 92, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 92, 0: Exactly one space required around assignment
+ 	aleatorio=lista_chance[poke]
+           ^ (bad-whitespace)
+W: 93, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 97, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 97, 0: Exactly one space required around assignment
+	expganha=insperdex[oponente]["Exp"]
+         ^ (bad-whitespace)
+W: 98, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 98, 0: Exactly one space required around assignment
+	posicao=seus_inspermons.index(jogador)
+        ^ (bad-whitespace)
+W: 99, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 99, 0: Exactly one space required around assignment
+	xpi=exp[posicao]
+    ^ (bad-whitespace)
+W:100, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:100, 0: Exactly one space required around assignment
+	xptotal=xpi+expganha
+        ^ (bad-whitespace)
+W:101, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:102, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:102, 0: Exactly one space required after comma
+	exp.insert(posicao,xptotal)
+                   ^ (bad-whitespace)
+W:103, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:106, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:107, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:110, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:111, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:111, 0: Exactly one space required around assignment
+		posicaopok=seus_inspermons.index("Pikaxu")
+            ^ (bad-whitespace)
+W:112, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:113, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:113, 0: Exactly one space required after comma
+		seus_inspermons.insert(posicaopok,"Cetaxu")
+                                   ^ (bad-whitespace)
+C:114, 0: Trailing whitespace (trailing-whitespace)
+W:114, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:115, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:116, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:116, 0: Exactly one space required around assignment
+		posicaopok=seus_inspermons.index("Kapuznakara")
+            ^ (bad-whitespace)
+W:117, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:118, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:118, 0: Exactly one space required after comma
+		seus_inspermons.insert(posicaopok,"Bonenakara")
+                                   ^ (bad-whitespace)
+W:119, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:120, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:121, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:121, 0: Exactly one space required around assignment
+		posicaopok=seus_inspermons.index("Xanaina")
+            ^ (bad-whitespace)
+W:122, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:123, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:123, 0: Exactly one space required after comma
+		seus_inspermons.insert(posicaopok,"Xanalna")
+                                   ^ (bad-whitespace)
+W:124, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:125, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:126, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:126, 0: Exactly one space required around assignment
+		posicaopok=seus_inspermons.index("Kingnaldo")
+            ^ (bad-whitespace)
+W:127, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:128, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:128, 0: Exactly one space required after comma
+		seus_inspermons.insert(posicaopok,"Godnaldo")
+                                   ^ (bad-whitespace)
+W:129, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:130, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:131, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:131, 0: Exactly one space required around assignment
+		posicaopok=seus_inspermons.index("Douglas")
+            ^ (bad-whitespace)
+W:132, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:133, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:133, 0: Exactly one space required after comma
+		seus_inspermons.insert(posicaopok,"Showglas")
+                                   ^ (bad-whitespace)
+W:134, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:137, 0: Exactly one space required after comma
+def batalha(jogador,oponente,niveljog): #Função Batalha
+                   ^ (bad-whitespace)
+C:137, 0: Exactly one space required after comma
+def batalha(jogador,oponente,niveljog): #Função Batalha
+                            ^ (bad-whitespace)
+W:138, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:138, 0: Exactly one space required around comparison
+	if niveljog>1:
+            ^ (bad-whitespace)
+W:139, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:139, 0: Exactly one space required around assignment
+		nvlopo=nivelopo(niveljog)
+        ^ (bad-whitespace)
+W:140, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:140, 0: Exactly one space required around comparison
+	elif niveljog==1:
+              ^^ (bad-whitespace)
+W:141, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:141, 0: Exactly one space required around assignment
+		nvlopo=1
+        ^ (bad-whitespace)
+W:142, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:142, 0: Exactly one space required around assignment
+	listavida=[]
+          ^ (bad-whitespace)
+W:143, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:144, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:145, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:145, 0: Exactly one space required around assignment
+	vidajog=listavida[seus_inspermons.index(jogador)]
+        ^ (bad-whitespace)
+W:146, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:146, 0: Exactly one space required around assignment
+	vidaopo=insperdex[oponente]["Vida"]+10*nvlopo
+        ^ (bad-whitespace)
+W:147, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:147, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+C:147, 0: Exactly one space required after comma
+	print("Você encontrou um {} selvagem nível {}!".format(oponente,nvlopo))
+                                                                  ^ (bad-whitespace)
+W:148, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:149, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:149, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+W:150, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:150, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+W:151, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:151, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+W:152, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:152, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+W:153, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:153, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+C:154, 0: Trailing whitespace (trailing-whitespace)
+W:155, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:156, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:156, 0: Exactly one space required around assignment
+		dexjog[oponente]=insperdex[oponente]
+                  ^ (bad-whitespace)
+W:157, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:158, 0: Trailing whitespace (trailing-whitespace)
+W:159, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:159, 0: Exactly one space required around comparison
+	while vidajog>0 and vidaopo>0:
+              ^ (bad-whitespace)
+C:159, 0: Exactly one space required around comparison
+	while vidajog>0 and vidaopo>0:
+                            ^ (bad-whitespace)
+C:160, 0: Trailing whitespace (trailing-whitespace)
+W:161, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:162, 0: Line too long (115/100) (line-too-long)
+W:162, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:162, 0: Exactly one space required around assignment
+			acao=str(input("Qual o seu comando? (Lutar(L) ou Fugir(F) ou Trocar Inspermon(T))")).lower() #Escolha de comando
+       ^ (bad-whitespace)
+W:164, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:165, 0: Line too long (126/100) (line-too-long)
+W:165, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:165, 0: Exactly one space required around assignment
+			acao=str(input("Qual o seu comando? (Lutar(L), Fugir(F), Capturar(C) ou Trocar Inspermon(T))")).lower() #Escolha de comando
+       ^ (bad-whitespace)
+C:166, 0: Trailing whitespace (trailing-whitespace)
+C:167, 0: Trailing whitespace (trailing-whitespace)
+W:167, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:168, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:169, 0: Trailing whitespace (trailing-whitespace)
+W:170, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:170, 0: Exactly one space required around comparison
+			if ((insperdex[jogador]["Ataque"]+10*niveljog)-(insperdex[oponente]["Defesa"]+10*nvlopo))>0:
+                                                                                            ^ (bad-whitespace)
+C:171, 0: Trailing whitespace (trailing-whitespace)
+W:172, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:172, 0: Exactly one space required around comparison
+				if vidajog>0: #Ataque Jogador
+              ^ (bad-whitespace)
+C:173, 0: Trailing whitespace (trailing-whitespace)
+W:174, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:174, 0: Exactly one space required around comparison
+					if critico()==True:
+                 ^^ (bad-whitespace)
+C:175, 0: Line too long (112/100) (line-too-long)
+W:175, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:175, 0: Exactly one space required around assignment
+						vidaopo=vidaopo-((insperdex[jogador]["Ataque"]+10*niveljog)-(insperdex[oponente]["Defesa"]+10*nvlopo))*1.5
+             ^ (bad-whitespace)
+C:176, 0: Trailing whitespace (trailing-whitespace)
+W:177, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:177, 0: Exactly one space required around comparison
+						if vidaopo>0:
+                ^ (bad-whitespace)
+W:178, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:178, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+C:178, 0: Exactly one space required after comma
+							print("O {} leva um ataque CRÍTICO e fica com {} de vida".format(oponente,vidaopo))
+                                                                                 ^ (bad-whitespace)
+W:179, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:180, 0: Trailing whitespace (trailing-whitespace)
+W:181, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:181, 0: Exactly one space required around comparison
+						elif vidaopo<=0:
+                  ^^ (bad-whitespace)
+W:182, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:182, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+W:183, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:184, 0: Trailing whitespace (trailing-whitespace)
+W:185, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:186, 0: Line too long (108/100) (line-too-long)
+W:186, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:186, 0: Exactly one space required around assignment
+						vidaopo=vidaopo-((insperdex[jogador]["Ataque"]+10*niveljog)-(insperdex[oponente]["Defesa"]+10*nvlopo))
+             ^ (bad-whitespace)
+C:187, 0: Trailing whitespace (trailing-whitespace)
+W:188, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:188, 0: Exactly one space required around comparison
+						if vidaopo>0:
+                ^ (bad-whitespace)
+W:189, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:189, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+C:189, 0: Exactly one space required after comma
+							print("O {} leva o ataque e fica com {} de vida".format(oponente,vidaopo))
+                                                                       ^ (bad-whitespace)
+W:190, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:191, 0: Trailing whitespace (trailing-whitespace)
+W:192, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:192, 0: Exactly one space required around comparison
+						elif vidaopo<=0:
+                  ^^ (bad-whitespace)
+W:193, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:193, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+W:194, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:195, 0: Trailing whitespace (trailing-whitespace)
+W:196, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:196, 0: Exactly one space required around comparison
+			elif ((insperdex[jogador]["Ataque"]+10*niveljog)-(insperdex[oponente]["Defesa"]+10*nvlopo))<=0:
+                                                                                              ^^ (bad-whitespace)
+W:197, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:197, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+C:198, 0: Trailing whitespace (trailing-whitespace)
+C:199, 0: Trailing whitespace (trailing-whitespace)
+W:200, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:200, 0: Exactly one space required around comparison
+			if ((insperdex[oponente]["Ataque"]+10*nvlopo)-(insperdex[jogador]["Defesa"]+10*niveljog))>0:
+                                                                                            ^ (bad-whitespace)
+C:201, 0: Trailing whitespace (trailing-whitespace)
+W:202, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:202, 0: Exactly one space required around comparison
+				if vidaopo>0: #Ataque Oponente
+              ^ (bad-whitespace)
+W:203, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:203, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+W:204, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:205, 0: Trailing whitespace (trailing-whitespace)
+W:206, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:206, 0: Exactly one space required around comparison
+					if critico()==True:
+                 ^^ (bad-whitespace)
+C:207, 0: Line too long (112/100) (line-too-long)
+W:207, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:207, 0: Exactly one space required around assignment
+						vidajog=vidajog-((insperdex[oponente]["Ataque"]+10*nvlopo)-(insperdex[jogador]["Defesa"]+10*niveljog))*1.5
+             ^ (bad-whitespace)
+C:208, 0: Trailing whitespace (trailing-whitespace)
+W:209, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:209, 0: Exactly one space required around comparison
+						if vidajog>0:
+                ^ (bad-whitespace)
+W:210, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:210, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+C:210, 0: Exactly one space required after comma
+							print("O seu {} é atacado CRITICAMENTE e fica com {} de vida".format(jogador,vidajog))
+                                                                                    ^ (bad-whitespace)
+W:211, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:212, 0: Trailing whitespace (trailing-whitespace)
+W:213, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:213, 0: Exactly one space required around comparison
+						elif vidajog<=0:
+                  ^^ (bad-whitespace)
+W:214, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:214, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+W:215, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:216, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:216, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+W:217, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:218, 0: Trailing whitespace (trailing-whitespace)
+W:219, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:220, 0: Line too long (108/100) (line-too-long)
+W:220, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:220, 0: Exactly one space required around assignment
+						vidajog=vidajog-((insperdex[oponente]["Ataque"]+10*nvlopo)-(insperdex[jogador]["Defesa"]+10*niveljog))
+             ^ (bad-whitespace)
+C:221, 0: Trailing whitespace (trailing-whitespace)
+W:222, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:222, 0: Exactly one space required around comparison
+						if vidajog>0:
+                ^ (bad-whitespace)
+W:223, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:223, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+C:223, 0: Exactly one space required after comma
+							print("O seu {} é atacado e fica com {} de vida".format(jogador,vidajog))
+                                                                       ^ (bad-whitespace)
+W:224, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:225, 0: Trailing whitespace (trailing-whitespace)
+W:226, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:226, 0: Exactly one space required around comparison
+						elif vidajog<=0:
+                  ^^ (bad-whitespace)
+W:227, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:227, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+W:228, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:229, 0: Trailing whitespace (trailing-whitespace)
+W:230, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:230, 0: Exactly one space required around comparison
+			elif ((insperdex[oponente]["Ataque"]+10*nvlopo)-(insperdex[jogador]["Defesa"]+10*niveljog))<=0:
+                                                                                              ^^ (bad-whitespace)
+W:231, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:231, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+C:232, 0: Trailing whitespace (trailing-whitespace)
+W:233, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:233, 0: Exactly one space required around comparison
+			if vidaopo<=0: #Resultado Batalha
+             ^^ (bad-whitespace)
+W:234, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:234, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+C:234, 0: Exactly one space required after comma
+				print(("Você venceu! Seu {} ganhou {} de exp!").format(jogador,insperdex[oponente]["Exp"]))
+                                                                   ^ (bad-whitespace)
+W:235, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:236, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:237, 0: Trailing whitespace (trailing-whitespace)
+W:238, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:238, 0: Exactly one space required around comparison
+			elif vidajog<=0:
+               ^^ (bad-whitespace)
+W:239, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:239, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+W:240, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:241, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:242, 0: Trailing whitespace (trailing-whitespace)
+W:243, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:244, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:245, 0: Trailing whitespace (trailing-whitespace)
+W:246, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:246, 0: Exactly one space required around comparison
+			if luta()==True:
+            ^^ (bad-whitespace)
+W:247, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:247, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+W:248, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:249, 0: Trailing whitespace (trailing-whitespace)
+W:250, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:250, 0: Exactly one space required around comparison
+				if ((insperdex[oponente]["Ataque"]+10*nvlopo)-(insperdex[jogador]["Defesa"]+10*niveljog))>0:
+                                                                                             ^ (bad-whitespace)
+C:251, 0: Trailing whitespace (trailing-whitespace)
+W:252, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:252, 0: Exactly one space required around comparison
+					if vidaopo>0: #Ataque Oponente
+               ^ (bad-whitespace)
+W:253, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:253, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+W:254, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:255, 0: Trailing whitespace (trailing-whitespace)
+W:256, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:256, 0: Exactly one space required around comparison
+						if critico()==True:
+                  ^^ (bad-whitespace)
+C:257, 0: Line too long (113/100) (line-too-long)
+W:257, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:257, 0: Exactly one space required around assignment
+							vidajog=vidajog-((insperdex[oponente]["Ataque"]+10*nvlopo)-(insperdex[jogador]["Defesa"]+10*niveljog))*1.5
+              ^ (bad-whitespace)
+C:258, 0: Trailing whitespace (trailing-whitespace)
+W:259, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:259, 0: Exactly one space required around comparison
+							if vidajog>0:
+                 ^ (bad-whitespace)
+W:260, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:260, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+C:260, 0: Exactly one space required after comma
+								print("O seu {} é atacado CRITICAMENTE e fica com {} de vida".format(jogador,vidajog))
+                                                                                     ^ (bad-whitespace)
+W:261, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:262, 0: Trailing whitespace (trailing-whitespace)
+W:263, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:263, 0: Exactly one space required around comparison
+							elif vidajog<=0:
+                   ^^ (bad-whitespace)
+W:264, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:264, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+W:265, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:266, 0: Trailing whitespace (trailing-whitespace)
+W:267, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:268, 0: Line too long (109/100) (line-too-long)
+W:268, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:268, 0: Exactly one space required around assignment
+							vidajog=vidajog-((insperdex[oponente]["Ataque"]+10*nvlopo)-(insperdex[jogador]["Defesa"]+10*niveljog))
+              ^ (bad-whitespace)
+C:269, 0: Trailing whitespace (trailing-whitespace)
+W:270, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:270, 0: Exactly one space required around comparison
+							if vidajog>0:
+                 ^ (bad-whitespace)
+W:271, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:271, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+C:271, 0: Exactly one space required after comma
+								print("O seu {} é atacado e fica com {} de vida".format(jogador,vidajog))
+                                                                        ^ (bad-whitespace)
+W:272, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:273, 0: Trailing whitespace (trailing-whitespace)
+W:274, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:274, 0: Exactly one space required around comparison
+							elif vidajog<=0:
+                   ^^ (bad-whitespace)
+W:275, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:275, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+W:276, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:277, 0: Trailing whitespace (trailing-whitespace)
+W:278, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:278, 0: Exactly one space required around comparison
+				elif ((insperdex[oponente]["Ataque"]+10*nvlopo)-(insperdex[jogador]["Defesa"]+10*niveljog))<=0:
+                                                                                               ^^ (bad-whitespace)
+W:279, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:279, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+W:280, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:281, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:281, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+W:282, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:283, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:285, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:286, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:287, 0: Trailing whitespace (trailing-whitespace)
+W:288, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:289, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:289, 0: Exactly one space required before assignment
+				cc= captura(oponente,vidaopo)
+      ^ (bad-whitespace)
+C:289, 0: Exactly one space required after comma
+				cc= captura(oponente,vidaopo)
+                        ^ (bad-whitespace)
+C:290, 0: Trailing whitespace (trailing-whitespace)
+W:291, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:292, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:293, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:294, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:294, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+W:295, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:296, 0: Trailing whitespace (trailing-whitespace)
+W:297, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:298, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:298, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+C:299, 0: Trailing whitespace (trailing-whitespace)
+W:300, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:300, 0: Exactly one space required around comparison
+					if ((insperdex[oponente]["Ataque"]+10*nvlopo)-(insperdex[jogador]["Defesa"]+10*niveljog))>0:
+                                                                                              ^ (bad-whitespace)
+C:301, 0: Trailing whitespace (trailing-whitespace)
+W:302, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:302, 0: Exactly one space required around comparison
+						if vidaopo>0: #Ataque Oponente
+                ^ (bad-whitespace)
+W:303, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:303, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+W:304, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:305, 0: Trailing whitespace (trailing-whitespace)
+W:306, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:306, 0: Exactly one space required around comparison
+							if critico()==True:
+                   ^^ (bad-whitespace)
+C:307, 0: Line too long (114/100) (line-too-long)
+W:307, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:307, 0: Exactly one space required around assignment
+								vidajog=vidajog-((insperdex[oponente]["Ataque"]+10*nvlopo)-(insperdex[jogador]["Defesa"]+10*niveljog))*1.5
+               ^ (bad-whitespace)
+C:308, 0: Trailing whitespace (trailing-whitespace)
+W:309, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:309, 0: Exactly one space required around comparison
+								if vidajog>0:
+                  ^ (bad-whitespace)
+W:310, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:310, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+C:310, 0: Exactly one space required after comma
+									print("O seu {} é atacado CRITICAMENTE e fica com {} de vida".format(jogador,vidajog))
+                                                                                      ^ (bad-whitespace)
+W:311, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:312, 0: Trailing whitespace (trailing-whitespace)
+W:313, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:313, 0: Exactly one space required around comparison
+								elif vidajog<=0:
+                    ^^ (bad-whitespace)
+W:314, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:314, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+W:315, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:316, 0: Trailing whitespace (trailing-whitespace)
+W:317, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:318, 0: Line too long (110/100) (line-too-long)
+W:318, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:318, 0: Exactly one space required around assignment
+								vidajog=vidajog-((insperdex[oponente]["Ataque"]+10*nvlopo)-(insperdex[jogador]["Defesa"]+10*niveljog))
+               ^ (bad-whitespace)
+C:319, 0: Trailing whitespace (trailing-whitespace)
+W:320, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:320, 0: Exactly one space required around comparison
+								if vidajog>0:
+                  ^ (bad-whitespace)
+W:321, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:321, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+C:321, 0: Exactly one space required after comma
+									print("O seu {} é atacado e fica com {} de vida".format(jogador,vidajog))
+                                                                         ^ (bad-whitespace)
+W:322, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:323, 0: Trailing whitespace (trailing-whitespace)
+W:324, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:324, 0: Exactly one space required around comparison
+								elif vidajog<=0:
+                    ^^ (bad-whitespace)
+W:325, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:325, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+W:326, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:327, 0: Trailing whitespace (trailing-whitespace)
+W:328, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:328, 0: Exactly one space required around comparison
+					elif ((insperdex[oponente]["Ataque"]+10*nvlopo)-(insperdex[jogador]["Defesa"]+10*niveljog))<=0:
+                                                                                                ^^ (bad-whitespace)
+W:329, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:329, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+W:331, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:332, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:332, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+W:334, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:335, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:335, 0: Exactly one space required around assignment
+			listavida[seus_inspermons.index(jogador)]=vidajog
+                                            ^ (bad-whitespace)
+W:336, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:336, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+W:337, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:337, 0: Exactly one space required after comma
+			for h in range(0,len(seus_inspermons)):
+                   ^ (bad-whitespace)
+W:338, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:338, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+C:338, 0: Exactly one space required after comma
+				print("{}({})".format(seus_inspermons[h],h+1))
+                                            ^ (bad-whitespace)
+W:339, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:340, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:340, 0: Exactly one space required around assignment
+			hh=int(input("Insira o numero do inspermon desejado :"))
+     ^ (bad-whitespace)
+W:341, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:341, 0: Exactly one space required around assignment
+			jogador=seus_inspermons[hh-1]
+          ^ (bad-whitespace)
+W:342, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:342, 0: Exactly one space required around assignment
+			vidajog=listavida[seus_inspermons.index(jogador)]
+          ^ (bad-whitespace)
+W:343, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:344, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:344, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+W:346, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:346, 0: Exactly one space required around comparison
+			if ((insperdex[oponente]["Ataque"]+10*nvlopo)-(insperdex[jogador]["Defesa"]+10*niveljog))>0:
+                                                                                            ^ (bad-whitespace)
+C:347, 0: Trailing whitespace (trailing-whitespace)
+W:348, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:348, 0: Exactly one space required around comparison
+				if vidaopo>0: #Ataque Oponente
+              ^ (bad-whitespace)
+W:349, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:349, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+W:350, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:351, 0: Trailing whitespace (trailing-whitespace)
+W:352, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:352, 0: Exactly one space required around comparison
+					if critico()==True:
+                 ^^ (bad-whitespace)
+C:353, 0: Line too long (112/100) (line-too-long)
+W:353, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:353, 0: Exactly one space required around assignment
+						vidajog=vidajog-((insperdex[oponente]["Ataque"]+10*nvlopo)-(insperdex[jogador]["Defesa"]+10*niveljog))*1.5
+             ^ (bad-whitespace)
+C:354, 0: Trailing whitespace (trailing-whitespace)
+W:355, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:355, 0: Exactly one space required around comparison
+						if vidajog>0:
+                ^ (bad-whitespace)
+W:356, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:356, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+C:356, 0: Exactly one space required after comma
+							print("O seu {} é atacado CRITICAMENTE e fica com {} de vida".format(jogador,vidajog))
+                                                                                    ^ (bad-whitespace)
+W:357, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:358, 0: Trailing whitespace (trailing-whitespace)
+W:359, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:359, 0: Exactly one space required around comparison
+						elif vidajog<=0:
+                  ^^ (bad-whitespace)
+W:360, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:360, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+W:361, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:362, 0: Trailing whitespace (trailing-whitespace)
+W:363, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:364, 0: Line too long (108/100) (line-too-long)
+W:364, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:364, 0: Exactly one space required around assignment
+						vidajog=vidajog-((insperdex[oponente]["Ataque"]+10*nvlopo)-(insperdex[jogador]["Defesa"]+10*niveljog))
+             ^ (bad-whitespace)
+C:365, 0: Trailing whitespace (trailing-whitespace)
+W:366, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:366, 0: Exactly one space required around comparison
+						if vidajog>0:
+                ^ (bad-whitespace)
+W:367, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:367, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+C:367, 0: Exactly one space required after comma
+							print("O seu {} é atacado e fica com {} de vida".format(jogador,vidajog))
+                                                                       ^ (bad-whitespace)
+W:368, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:369, 0: Trailing whitespace (trailing-whitespace)
+W:370, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:370, 0: Exactly one space required around comparison
+						elif vidajog<=0:
+                  ^^ (bad-whitespace)
+W:371, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:371, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+W:372, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:373, 0: Trailing whitespace (trailing-whitespace)
+W:374, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:374, 0: Exactly one space required around comparison
+			elif ((insperdex[oponente]["Ataque"]+10*nvlopo)-(insperdex[jogador]["Defesa"]+10*niveljog))<=0:
+                                                                                              ^^ (bad-whitespace)
+W:375, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:375, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+C:378, 0: Trailing whitespace (trailing-whitespace)
+C:378, 0: Exactly one space required around assignment
+expj=0	#experiencia jogador			
+    ^ (bad-whitespace)
+C:379, 0: Exactly one space required around assignment
+niveljog=1
+        ^ (bad-whitespace)
+C:380, 0: Exactly one space required around assignment
+exp=[]	#experiencia pokemons
+   ^ (bad-whitespace)
+C:381, 0: Exactly one space required around assignment
+lista_saves=[]
+           ^ (bad-whitespace)
+C:382, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+W:385, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:385, 0: Exactly one space required around assignment
+	inicio=str(input("New Game(N) ou Load Game(L)? ")).lower()
+       ^ (bad-whitespace)
+C:386, 0: Trailing whitespace (trailing-whitespace)
+W:387, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:387, 0: Exactly one space required around comparison
+	if inicio=="new game" or inicio=="n":
+          ^^ (bad-whitespace)
+C:387, 0: Exactly one space required around comparison
+	if inicio=="new game" or inicio=="n":
+                                ^^ (bad-whitespace)
+W:388, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:389, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:389, 0: Exactly one space required around assignment
+			jogador=str(input("Qual seu Inspermon inicial? (Xanaina, Kingnaldo ou Douglas) ")).title()
+          ^ (bad-whitespace)
+W:390, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:390, 0: Exactly one space required around assignment
+			dexjog[jogador]=insperdex[jogador]
+                  ^ (bad-whitespace)
+W:391, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:392, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:393, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:394, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:395, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:396, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:397, 0: Trailing whitespace (trailing-whitespace)
+W:398, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:398, 0: Exactly one space required around comparison
+	if inicio=="load game" or inicio=="l":
+          ^^ (bad-whitespace)
+C:398, 0: Exactly one space required around comparison
+	if inicio=="load game" or inicio=="l":
+                                 ^^ (bad-whitespace)
+W:399, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:400, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:400, 0: Exactly one space required around assignment
+			lista_saves=pickle.load(open("lista","rb"))
+              ^ (bad-whitespace)
+C:400, 0: Exactly one space required after comma
+			lista_saves=pickle.load(open("lista","rb"))
+                                       ^ (bad-whitespace)
+W:401, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:401, 0: Exactly one space required around comparison
+			if len(lista_saves)>0:
+                      ^ (bad-whitespace)
+W:402, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:402, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+W:403, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:404, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:404, 0: Exactly one space required around assignment
+				file=str(input("Qual save deseja carregar? "))
+        ^ (bad-whitespace)
+W:405, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:405, 0: Exactly one space required around assignment
+				dado=load(file)
+        ^ (bad-whitespace)
+W:406, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:406, 0: Exactly one space required around assignment
+				dexjog=dado["dados"][0]
+          ^ (bad-whitespace)
+W:407, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:407, 0: Exactly one space required around assignment
+				exp=dado["dados"][1]
+       ^ (bad-whitespace)
+W:408, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:408, 0: Exactly one space required around assignment
+				jogador=dado["dados"][2]
+           ^ (bad-whitespace)
+W:409, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:409, 0: Exactly one space required around assignment
+				seus_inspermons=dado["dados"][3]
+                   ^ (bad-whitespace)
+W:410, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:410, 0: Exactly one space required around assignment
+				niveljog=dado["dados"][4]
+            ^ (bad-whitespace)
+W:411, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:411, 0: Exactly one space required around assignment
+				expj=dado["dados"][5]
+        ^ (bad-whitespace)
+W:412, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:412, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+W:413, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:414, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:414, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+W:415, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:416, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:416, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+W:417, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:418, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:419, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:419, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+C:423, 0: Line too long (152/100) (line-too-long)
+W:423, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:423, 0: Exactly one space required around assignment
+	fazer=str(input("O que você vai fazer? (Passear(P), Dormir(D), Insperdex(I), Salvar(S), Load(L) ou Trocar Inspermon(T)? ")).lower() #Escolha de ação
+      ^ (bad-whitespace)
+W:424, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:425, 0: Trailing whitespace (trailing-whitespace)
+W:426, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:427, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:427, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+C:428, 0: Trailing whitespace (trailing-whitespace)
+W:428, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:429, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:429, 0: Exactly one space required around assignment
+		oponente=roll()
+          ^ (bad-whitespace)
+W:430, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:432, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:432, 0: Exactly one space required after comma
+		if batalha(jogador,oponente,niveljog)==True:
+                    ^ (bad-whitespace)
+C:432, 0: Exactly one space required after comma
+		if batalha(jogador,oponente,niveljog)==True:
+                             ^ (bad-whitespace)
+C:432, 0: Exactly one space required around comparison
+		if batalha(jogador,oponente,niveljog)==True:
+                                       ^^ (bad-whitespace)
+W:433, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:434, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:434, 0: Exactly one space required after comma
+			expj = nivel(niveljog,expj)
+                        ^ (bad-whitespace)
+W:435, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:435, 0: Exactly one space required around assignment
+			posicao=seus_inspermons.index(jogador)
+          ^ (bad-whitespace)
+W:436, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:436, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+C:436, 0: Exactly one space required after comma
+			print("Seu {} possui {} de experiência".format(jogador,exp[posicao]))
+                                                          ^ (bad-whitespace)
+W:437, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:438, 0: Trailing whitespace (trailing-whitespace)
+W:439, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:439, 0: Exactly one space required after comparison
+			if expe >=insperdex[jogador]["Evo"]:
+           ^^ (bad-whitespace)
+W:440, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:440, 0: Exactly one space required around assignment
+				jogador=evolucao(jogador)
+           ^ (bad-whitespace)
+W:441, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:441, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+W:442, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:443, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:443, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+W:444, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:445, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:445, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+W:446, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:447, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:447, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+W:448, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:449, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:449, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+W:450, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:451, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:451, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+W:452, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:452, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+W:453, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:453, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+W:454, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:454, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+W:455, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:455, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+C:456, 0: Trailing whitespace (trailing-whitespace)
+W:457, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:457, 0: Exactly one space required around assignment
+				dexjog[jogador]=insperdex[jogador]
+                   ^ (bad-whitespace)
+W:459, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:460, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:461, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:462, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:462, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+W:463, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:464, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:464, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+W:465, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:466, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:467, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:467, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+W:468, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:470, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:471, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:471, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+C:472, 0: Trailing whitespace (trailing-whitespace)
+W:472, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:473, 0: Trailing whitespace (trailing-whitespace)
+W:474, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:475, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:475, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+W:476, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:478, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:479, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:479, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+W:480, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:480, 0: Exactly one space required after comma
+		for h in range(0,len(seus_inspermons)):
+                  ^ (bad-whitespace)
+W:481, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:481, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+C:481, 0: Exactly one space required after comma
+			print("{}({})".format(seus_inspermons[h],h+1))
+                                           ^ (bad-whitespace)
+W:482, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:483, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:483, 0: Exactly one space required around assignment
+		hh=int(input("Insira o numero do inspermon desejado :"))
+    ^ (bad-whitespace)
+W:484, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:484, 0: Exactly one space required around assignment
+		jogador=seus_inspermons[hh-1]
+         ^ (bad-whitespace)
+W:485, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:486, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:486, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+C:487, 0: Trailing whitespace (trailing-whitespace)
+W:488, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:489, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:489, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+W:490, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:490, 0: Exactly one space required around assignment
+		arquivo=str(input("Deseja salvar com que nome? "))
+         ^ (bad-whitespace)
+W:491, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:492, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:493, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:493, 0: Exactly one space required around assignment
+		saves=open("lista", "wb" )
+       ^ (bad-whitespace)
+C:493, 0: No space allowed before bracket
+		saves=open("lista", "wb" )
+                           ^ (bad-whitespace)
+W:494, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:495, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:496, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:496, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+W:497, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:498, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:498, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+W:499, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:500, 0: Trailing whitespace (trailing-whitespace)
+W:501, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:502, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:503, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:503, 0: Exactly one space required around assignment
+			lista_saves=pickle.load(open("lista","rb"))
+              ^ (bad-whitespace)
+C:503, 0: Exactly one space required after comma
+			lista_saves=pickle.load(open("lista","rb"))
+                                       ^ (bad-whitespace)
+W:504, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:504, 0: Exactly one space required around comparison
+			if len(lista_saves)>0:
+                      ^ (bad-whitespace)
+W:505, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:505, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+W:506, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:507, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:507, 0: Exactly one space required around assignment
+				file=str(input("Qual save deseja carregar? "))
+        ^ (bad-whitespace)
+W:508, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:508, 0: Exactly one space required around assignment
+				dado=load(file)
+        ^ (bad-whitespace)
+W:509, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:509, 0: Exactly one space required around assignment
+				dexjog=dado["dados"][0]
+          ^ (bad-whitespace)
+W:510, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:510, 0: Exactly one space required around assignment
+				exp=dado["dados"][1]
+       ^ (bad-whitespace)
+W:511, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:511, 0: Exactly one space required around assignment
+				jogador=dado["dados"][2]
+           ^ (bad-whitespace)
+W:512, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:512, 0: Exactly one space required around assignment
+				seus_inspermons=dado["dados"][3]
+                   ^ (bad-whitespace)
+W:513, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:513, 0: Exactly one space required around assignment
+				niveljog=dado["dados"][4]
+            ^ (bad-whitespace)
+W:514, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:514, 0: Exactly one space required around assignment
+				expj=dado["dados"][5]
+        ^ (bad-whitespace)
+W:515, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:515, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+W:516, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:517, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:517, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+W:518, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:519, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:520, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:520, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+C:523, 0: Trailing newlines (trailing-newlines)
+W:404, 4: Redefining built-in 'file' (redefined-builtin)
+C:  1, 0: Missing module docstring (missing-docstring)
+C:  4, 0: Invalid constant name "insperdex" (invalid-name)
+C: 37, 0: Invalid constant name "dexjog" (invalid-name)
+C: 38, 0: Invalid constant name "seus_inspermons" (invalid-name)
+W: 41, 9: Redefining name 'arquivo' from outer scope (line 490) (redefined-outer-name)
+C: 41, 0: Missing function docstring (missing-docstring)
+W: 47, 9: Redefining name 'arquivo' from outer scope (line 490) (redefined-outer-name)
+W: 48, 1: Redefining name 'dado' from outer scope (line 405) (redefined-outer-name)
+C: 47, 0: Missing function docstring (missing-docstring)
+C: 52, 0: Missing function docstring (missing-docstring)
+R: 53, 1: The if statement can be replaced with 'return bool(test)' (simplifiable-if-statement)
+W: 59,13: Redefining name 'niveljog' from outer scope (line 379) (redefined-outer-name)
+C: 59, 0: Missing function docstring (missing-docstring)
+C: 64, 0: Missing function docstring (missing-docstring)
+R: 65, 1: The if statement can be replaced with 'return bool(test)' (simplifiable-if-statement)
+W: 71,12: Redefining name 'oponente' from outer scope (line 429) (redefined-outer-name)
+C: 71, 0: Missing function docstring (missing-docstring)
+R: 72, 1: The if statement can be replaced with 'return bool(test)' (simplifiable-if-statement)
+C: 78, 0: Invalid constant name "lista_evo" (invalid-name)
+C: 79, 0: Invalid constant name "lista_chance" (invalid-name)
+C: 90, 0: Missing function docstring (missing-docstring)
+W: 96,25: Redefining name 'oponente' from outer scope (line 429) (redefined-outer-name)
+W: 98, 1: Redefining name 'posicao' from outer scope (line 435) (redefined-outer-name)
+W: 96,35: Redefining name 'exp' from outer scope (line 380) (redefined-outer-name)
+W: 96,16: Redefining name 'jogador' from outer scope (line 389) (redefined-outer-name)
+C: 96, 0: Missing function docstring (missing-docstring)
+W:105,10: Redefining name 'niveljog' from outer scope (line 379) (redefined-outer-name)
+W:105,20: Redefining name 'expj' from outer scope (line 378) (redefined-outer-name)
+C:105, 0: Missing function docstring (missing-docstring)
+W:105,10: Unused argument 'niveljog' (unused-argument)
+W:109,13: Redefining name 'jogador' from outer scope (line 389) (redefined-outer-name)
+C:109, 0: Missing function docstring (missing-docstring)
+W:143, 5: Redefining name 'i' from outer scope (line 80) (redefined-outer-name)
+W:337, 7: Redefining name 'h' from outer scope (line 480) (redefined-outer-name)
+W:137,20: Redefining name 'oponente' from outer scope (line 429) (redefined-outer-name)
+W:137,12: Redefining name 'jogador' from outer scope (line 389) (redefined-outer-name)
+W:137,29: Redefining name 'niveljog' from outer scope (line 379) (redefined-outer-name)
+W:340, 3: Redefining name 'hh' from outer scope (line 483) (redefined-outer-name)
+C:137, 0: Missing function docstring (missing-docstring)
+C:174, 8: Comparison to True should be just 'expr' or 'expr is True' (singleton-comparison)
+R:159, 1: Too many nested blocks (6/5) (too-many-nested-blocks)
+C:206, 8: Comparison to True should be just 'expr' or 'expr is True' (singleton-comparison)
+R:159, 1: Too many nested blocks (6/5) (too-many-nested-blocks)
+C:246, 6: Comparison to True should be just 'expr' or 'expr is True' (singleton-comparison)
+C:256, 9: Comparison to True should be just 'expr' or 'expr is True' (singleton-comparison)
+R:159, 1: Too many nested blocks (7/5) (too-many-nested-blocks)
+C:289, 4: Invalid variable name "cc" (invalid-name)
+C:291, 7: Comparison to True should be just 'expr' or 'expr is True' (singleton-comparison)
+C:297, 7: Comparison to False should be 'not expr' or 'expr is False' (singleton-comparison)
+C:306,10: Comparison to True should be just 'expr' or 'expr is True' (singleton-comparison)
+R:159, 1: Too many nested blocks (8/5) (too-many-nested-blocks)
+C:337, 7: Invalid variable name "h" (invalid-name)
+C:340, 3: Invalid variable name "hh" (invalid-name)
+C:352, 8: Comparison to True should be just 'expr' or 'expr is True' (singleton-comparison)
+R:159, 1: Too many nested blocks (6/5) (too-many-nested-blocks)
+R:137, 0: Too many branches (65/12) (too-many-branches)
+R:137, 0: Too many statements (173/50) (too-many-statements)
+C:378, 0: Invalid constant name "expj" (invalid-name)
+C:379, 0: Invalid constant name "niveljog" (invalid-name)
+C:380, 0: Invalid constant name "exp" (invalid-name)
+C:381, 0: Invalid constant name "lista_saves" (invalid-name)
+C:385, 1: Invalid constant name "inicio" (invalid-name)
+W:395, 2: No exception type(s) specified (bare-except)
+C:389, 3: Invalid constant name "jogador" (invalid-name)
+W:418, 2: No exception type(s) specified (bare-except)
+C:400, 3: Invalid constant name "lista_saves" (invalid-name)
+C:404, 4: Invalid constant name "file" (invalid-name)
+C:405, 4: Invalid constant name "dado" (invalid-name)
+C:406, 4: Invalid constant name "dexjog" (invalid-name)
+C:407, 4: Invalid constant name "exp" (invalid-name)
+C:408, 4: Invalid constant name "jogador" (invalid-name)
+C:409, 4: Invalid constant name "seus_inspermons" (invalid-name)
+C:410, 4: Invalid constant name "niveljog" (invalid-name)
+C:411, 4: Invalid constant name "expj" (invalid-name)
+C:423, 1: Invalid constant name "fazer" (invalid-name)
+C:429, 2: Invalid constant name "oponente" (invalid-name)
+C:430, 2: Invalid constant name "expneeded" (invalid-name)
+C:432, 5: Comparison to True should be just 'expr' or 'expr is True' (singleton-comparison)
+C:433, 3: Invalid constant name "expe" (invalid-name)
+C:434, 3: Invalid constant name "expj" (invalid-name)
+C:435, 3: Invalid constant name "posicao" (invalid-name)
+C:440, 4: Invalid constant name "jogador" (invalid-name)
+C:460, 3: Invalid constant name "niveljog" (invalid-name)
+E:462, 9: Too many arguments for format string (too-many-format-args)
+C:483, 2: Invalid constant name "hh" (invalid-name)
+C:484, 2: Invalid constant name "jogador" (invalid-name)
+C:490, 2: Invalid constant name "arquivo" (invalid-name)
+C:493, 2: Invalid constant name "saves" (invalid-name)
+W:519, 2: No exception type(s) specified (bare-except)
+C:503, 3: Invalid constant name "lista_saves" (invalid-name)
+C:507, 4: Invalid constant name "file" (invalid-name)
+C:508, 4: Invalid constant name "dado" (invalid-name)
+C:509, 4: Invalid constant name "dexjog" (invalid-name)
+C:510, 4: Invalid constant name "exp" (invalid-name)
+C:511, 4: Invalid constant name "jogador" (invalid-name)
+C:512, 4: Invalid constant name "seus_inspermons" (invalid-name)
+C:513, 4: Invalid constant name "niveljog" (invalid-name)
+C:514, 4: Invalid constant name "expj" (invalid-name)
+
+
+Report
+======
+378 statements analysed.
+
+Statistics by type
+------------------
+
++---------+-------+-----------+-----------+------------+---------+
+|type     |number |old number |difference |%documented |%badname |
++=========+=======+===========+===========+============+=========+
+|module   |1      |1          |=          |0.00        |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+|class    |0      |0          |=          |0           |0        |
++---------+-------+-----------+-----------+------------+---------+
+|method   |0      |0          |=          |0           |0        |
++---------+-------+-----------+-----------+------------+---------+
+|function |11     |11         |=          |0.00        |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+
+
+
+Raw metrics
+-----------
+
++----------+-------+------+---------+-----------+
+|type      |number |%     |previous |difference |
++==========+=======+======+=========+===========+
+|code      |401    |76.53 |401      |=          |
++----------+-------+------+---------+-----------+
+|docstring |20     |3.82  |20       |=          |
++----------+-------+------+---------+-----------+
+|comment   |0      |0.00  |0        |=          |
++----------+-------+------+---------+-----------+
+|empty     |103    |19.66 |103      |=          |
++----------+-------+------+---------+-----------+
+
+
+
+Duplication
+-----------
+
++-------------------------+------+---------+-----------+
+|                         |now   |previous |difference |
++=========================+======+=========+===========+
+|nb duplicated lines      |0     |0        |=          |
++-------------------------+------+---------+-----------+
+|percent duplicated lines |0.000 |0.000    |=          |
++-------------------------+------+---------+-----------+
+
+
+
+Messages by category
+--------------------
+
++-----------+-------+---------+-----------+
+|type       |number |previous |difference |
++===========+=======+=========+===========+
+|convention |443    |443      |=          |
++-----------+-------+---------+-----------+
+|refactor   |10     |10       |=          |
++-----------+-------+---------+-----------+
+|warning    |435    |435      |=          |
++-----------+-------+---------+-----------+
+|error      |1      |1        |=          |
++-----------+-------+---------+-----------+
+
+
+
+Messages
+--------
+
++--------------------------+------------+
+|message id                |occurrences |
++==========================+============+
+|mixed-indentation         |361         |
++--------------------------+------------+
+|bad-whitespace            |181         |
++--------------------------+------------+
+|superfluous-parens        |79          |
++--------------------------+------------+
+|trailing-whitespace       |74          |
++--------------------------+------------+
+|invalid-encoded-data      |51          |
++--------------------------+------------+
+|invalid-name              |44          |
++--------------------------+------------+
+|bad-continuation          |30          |
++--------------------------+------------+
+|redefined-outer-name      |18          |
++--------------------------+------------+
+|line-too-long             |13          |
++--------------------------+------------+
+|missing-docstring         |12          |
++--------------------------+------------+
+|singleton-comparison      |9           |
++--------------------------+------------+
+|too-many-nested-blocks    |5           |
++--------------------------+------------+
+|simplifiable-if-statement |3           |
++--------------------------+------------+
+|bare-except               |3           |
++--------------------------+------------+
+|unused-argument           |1           |
++--------------------------+------------+
+|trailing-newlines         |1           |
++--------------------------+------------+
+|too-many-statements       |1           |
++--------------------------+------------+
+|too-many-format-args      |1           |
++--------------------------+------------+
+|too-many-branches         |1           |
++--------------------------+------------+
+|redefined-builtin         |1           |
++--------------------------+------------+
+
+
+
+Global evaluation
+-----------------
+Your code has been rated at -13.62/10 (previous run: -13.62/10, +0.00)
+
